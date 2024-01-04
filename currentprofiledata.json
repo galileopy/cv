@@ -1,0 +1,198 @@
+{
+  "_id": "currentprofiledata",
+  "_rev": "4-1de5156bd1dd01e0a9f799f2963621b1",
+  "main": {
+    "name": "Galileo Sánchez",
+    "occupation": "Web developer and programmer",
+    "description": "I design and program Node.js APIS and if you want, React and React Native applications.",
+    "image": "avatar.jpg",
+    "bio": "I consider myself an amateur biohacker, constatly working to find balance in life. My goal in life is to live it day by day, being productive and useful, but without forgetting to enjoy the present. I am very easy to talk to, and I have my feets firmly planted into the ground. As a software developer I have more affinity with Javascript, and I have a very thorough understanding of everything software related, from programming abstractions to the byte level implementation of various protocols.",
+    "email": "contact at galileopy dot com",
+    "address": {
+      "street": "Tte 2do Félix Ayala 284 c/ Jorge Alcorta",
+      "city": "Asunción",
+      "state": "Paraguay",
+      "zip": "1632"
+    },
+    "website": "https://galileopy.com",
+    "resumedownload": "http://galileopy.com/cv/espanhol.pdf",
+    "social": [
+      {
+        "name": "twitter",
+        "url": "http://twitter.com/galileopy",
+        "className": "fa fa-twitter"
+      },
+      {
+        "name": "linkedin",
+        "url": "http://linkedin.com/in/galileopy",
+        "className": "fa fa-linkedin"
+      },
+      {
+        "name": "instagram",
+        "url": "http://instagram.com/galileopy",
+        "className": "fa fa-instagram"
+      },
+      {
+        "name": "github",
+        "url": "http://github.com/galileopy",
+        "className": "fa fa-github"
+      },
+      {
+        "name": "devrant",
+        "url": "https://devrant.com/users/galileopy",
+        "className": "fa fa-devrant"
+      }
+    ]
+  },
+  "resume": {
+    "education": [
+      {
+        "school": "National University of Asunción",
+        "degree": "Software Engineer",
+        "graduated": "Never - took all the CS courses",
+        "description": "My time in university was useful to learn the right kind of mathematic thinking needed to understand and use algorithms enough to be productive, however my main focus is the structure of language and how to make abstractions work, my favorite classes were Structure of Programming Languages and Algorithms."
+      }
+    ],
+    "work": [
+      {
+        "years": "Jan 2014 - Jun 2014",
+        "position": "Junior  Fullstack",
+        "language": "C#",
+        "project": "ERP Maintenance",
+        "company": "Consultura Baran y Asociados",
+        "tags": ["C#", "Visual Studio", "Oracle SQL", "VisualWebGUI"],
+        "links": ["https://wwww.cba.com.py"],
+        "logo": "img/baran.png"
+      },
+      {
+        "years": "2015",
+        "language": "Python",
+        "position": "Junior Fullstack",
+        "project": "Quizz Platform for personnel evaluation",
+        "company": "Softec SRL",
+        "tags": ["Django", "Javascript", "PostgreSQL", "HTML", "jQuery"],
+        "links": ["https://wwww.softec.com.py"],
+        "logo": "img/softec.png"
+      },
+      {
+        "years": "2016",
+        "position": "Full time student",
+        "project": "Learned different functional programming patterns, and discovered Folktale, Ramda, and others.",
+        "language": "Javascript",
+        "company": "Personal Projects",
+        "tags": ["NodeJS", "Bacon", "Folktale", "Electrum", "Bitcoin"],
+        "logo": "img/ecommerce.png"
+      },
+      {
+        "years": "2017",
+        "position": "Fullstack",
+        "project": "GPS Tracker platform",
+        "language": "Javascript",
+        "company": "MSI Americas LLC",
+        "tags": ["NodeJS", "Javascript", "PostgreSQL", "MQTT", "FRP"],
+        "links": ["https://wwww.msiamericas.com"],
+        "logo": "img/msi.png"
+      },
+      {
+        "years": "2017",
+        "position": "Frontend",
+        "project": "GUI implementation, surgical device",
+        "language": "C++/Qt",
+        "company": "Trivellini Tech, former Mamba Instruments SRL",
+        "tags": ["C++", "QT", "qt/Signals", "RaspBerry PI"],
+        "links": ["https://wwww.trivellinitech.com"],
+        "logo": "img/mamba.png"
+      },
+      {
+        "years": "2018",
+        "position": "Fullstack",
+        "project": "MQTT module for MANGOes",
+        "language": "Java",
+        "company": "Innovatica SRL",
+        "tags": ["Java", "Rhino", "MangoES"],
+        "link": ["https://www.innovatica.com.py"],
+        "logo": "img/innovatica.png"
+      },
+      {
+        "years": "2018",
+        "position": "Backend",
+        "project": "HTTP server for PDF generation using SVG templates.",
+        "language": "Javascript",
+        "company": "Ryan Stegmann",
+        "tags": ["NodeJS", "Bacon.js", "SVG", "PDF"],
+        "links": ["https://github.com/rstegg"],
+        "logo": "img/pdfgen.png"
+      },
+      {
+        "years": "2018",
+        "position": "1st Place Hackathon 2018",
+        "project": "Mobile application to issue open data request.",
+        "language": "Javascript",
+        "company": "MITIC former SENATICS",
+        "tags": ["NodeJS", "ReactNative", "Couchdb", "RxJS"],
+        "links": ["https://www.mitic.gov.py/"],
+        "logo": "img/pdfgen.png"
+      },
+      {
+        "years": "2019 - 2020",
+        "position": "Fullstack",
+        "project": "Maintenance and development of several internal systems",
+        "language": "Javascript",
+        "company": "Centro Nacional de Computación - UNA",
+        "tags": ["NodeJS", "React", "C#", "PDF", "RxJS"],
+        "links": ["https://wwww.cnc.una.py"],
+        "logo": "img/pdfgen.png"
+      },
+      {
+        "years": "2020",
+        "position": "FrontEnd",
+        "project": "Electronic Prescription System",
+        "language": "Javascript",
+        "company": "IQ.com.py / PTI Parque tecnológico Itaipú",
+        "tags": ["React", "GhostStories", "RxJS"],
+        "links": ["https://wwww.pti.org.py", "https://wwww.iq.com.py"],
+        "logo": "img/pdfgen.png"
+      },
+      {
+        "years": "2020",
+        "position": "BackEnd",
+        "project": "Real time distance based search service with firestore",
+        "language": "Javascript",
+        "company": "Empresario S.A.",
+        "tags": ["Node.js", "Firestore", "RxJS"],
+        "links": ["https://wwww.iq.com.py"],
+        "logo": "img/pdfgen.png"
+      },
+      {
+        "years": "2020",
+        "position": "Fullstack",
+        "project": "Fetch orders and make labels fully customizable",
+        "language": "Javascript",
+        "company": "Alien Milling Co.",
+        "tags": ["Shopify", "React", "Electron.js", "Node.js", "RxJS"],
+        "links": ["https://wwww.iq.com.py"],
+        "logo": "img/pdfgen.png"
+      }
+    ],
+    "skillsIntroduction": "Nothing to say here right now.",
+    "skills": [
+      { "name": "JavaScript", "level": "100%" },
+      { "name": "React.JS", "level": "100%" },
+      { "name": "Node.JS", "level": "100%" },
+      { "name": "React Native", "level": "90%" }
+    ]
+  },
+
+  "testimonials": {
+    "testimonials": [
+      {
+        "text": "Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.",
+        "user": "John Doe"
+      },
+      {
+        "text": "Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.",
+        "user": "Steve Smith"
+      }
+    ]
+  }
+}
