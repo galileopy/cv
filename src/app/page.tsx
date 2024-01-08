@@ -34,7 +34,28 @@ export default function Page() {
                 {RESUME_DATA.location}
               </a>
             </p>
+            <p className="max-w-md items-center text-pretty font-mono text-xs text-muted-foreground">
+              <a
+                className="inline-flex gap-x-1.5 align-baseline leading-none hover:underline"
+                href={RESUME_DATA.resumeUrl}
+                target="_blank"
+              > 
+              Resume
+              </a>
+            </p>
             <div className="flex gap-x-1 pt-1 font-mono text-sm text-muted-foreground print:hidden">
+            {RESUME_DATA.contact.email ? (
+                <Button
+                  className="size-8"
+                  variant="outline"
+                  size="icon"
+                  asChild
+                >
+                  <a href={`mailto:${RESUME_DATA.contact.email}`}>
+                    <MailIcon className="size-4" />
+                  </a>
+                </Button>
+              ) : null}
               {RESUME_DATA.contact.social.map((social) => (
                 <Button
                   key={social.name}

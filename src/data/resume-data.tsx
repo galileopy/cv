@@ -6,12 +6,14 @@ export const RESUME_DATA = {
   location: "Asunción, Paraguay, America/Asuncion (GMT-4)",
   locationLink: "https://www.google.com/maps/place/Asunción",
   about:
-    "Full Stack Engineer focused on building reliable and scalable products.",
+  "Full Stack Engineer focused on building reliable and scalable products.",
   summary:
-    "Currently, I primarily work with TypeScript, React, and Node.js. I bring 10 years of experience in application development, along with over 4 years of experience in remote collaboration with companies globally.",
+  "Currently, I primarily work with TypeScript, React, and Node.js. I bring 10 years of experience in application development, along with over 4 years of experience in remote collaboration with companies globally.",
   avatarUrl: "https://avatars.githubusercontent.com/u/7267587?v=4",
-  personalWebsiteUrl: "blog.galileopy.com.py",
+  personalWebsiteUrl: "galileopy.com.py",
+  resumeUrl: "cv.galileopy.com.py",
   contact: {
+    email: "galileo@galileopy.com.py",
     social: [
       {
         name: "GitHub",
