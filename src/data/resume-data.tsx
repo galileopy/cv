@@ -68,22 +68,26 @@ export const RESUME_DATA = {
       "end": "Sep 2024",
       "description": "Implemented a CI/CD pipeline with several tiers of testing and fully automated deployments of containerized applications.\nCollaborated in the design of a microservice architecture, and implemented container based applications, using NestJS and Typescript.\nActively documented the software development process and best practices, including writing technical design documents, technology selection and implementation."
     },
-    {
-      company: "Clipboard Health",
-      link: "https://www.clipboardhealth.com",
-      badges: ["Remote", "AWS"],
-      title: "Software Engineer → Senior Software Engineer",
-      start: "2021",
-      end: "2023",
-      description: `
-      Assisted in the migration of a large monolithic application into independent repositories. I took full ownership of the front-end extraction during this process.
-      Led multiple backend and microservice projects from conception to completion, including design, planning, and execution.
-      Performed tech lead responsibilities as needed, which included writing weekly updates for stakeholders.
-      Collaborated across diverse teams to ensure the successful delivery of projects.
-      Actively participated in the engineering team's hiring process, encompassing interviewing and onboarding new hires.
-      Conducted over 50 interviews and reviewed more than 100 technical challenges.
-      `,
-    },
+    
+  {
+    "company": "Clipboard Health",
+    "link": "https://www.clipboardhealth.com",
+    "badges": ["Remote"],
+    "title": "Senior Software Engineer",
+    "start": "Dec 2022",
+    "end": "Nov 2023",
+    "description": "Led a team in implementing event-driven microservices utilizing Change Data Capture (CDC) and probability models to predict unfulfilled demand in advance. This allowed for proactive offer pre-allocation, ensuring swift offer replacements and delivering an exceptional user experience.\nLed multiple technical experiments aimed at reducing customer churn and improving offer availability. Oversaw initiatives to monitor significant market shifts and prioritize them, using strategies such as personalized notifications, automated incentives, and user targeting based on preferences and behavior. Managed microservices projects from inception to completion, covering design, planning, and execution.\nCollaborated across diverse teams to ensure the successful delivery of projects.\nActively participated in the engineering team’s hiring process, encompassing interviewing and onboarding new hires. Conducted over 50 interviews and reviewed more ECHO than 100 technical challenges."
+  },
+  {
+    "company": "Clipboard Health",
+    "link": "https://www.clipboardhealth.com",
+    "badges": ["Paraguay"],
+    "title": "Software Development Engineer",
+    "start": "Nov 2021",
+    "end": "Feb 2023",
+    "description": "Established and led a new developer team, representing the product interests of the finance and billing team. Prioritized and addressed mission critical bugs related to invoicing.\nCompletely revamped the infrastructure supporting invoicing, migrating mission critical sub-systems from error prone, low-code services into in-house event-driven microservices, with 0 downtime.\nAssisted in the migration of a large monolithic application into independent repositories. I took full ownership of the front-end extraction during this process."
+  },
+
     {
       company: "Jijo",
       badges: ["Remote", "React"],
