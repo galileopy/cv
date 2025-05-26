@@ -42,6 +42,33 @@ export const RESUME_DATA = {
   ],
   work: [
     {
+      "company": "Glui",
+      "link": "",
+      "badges": ["Remote"],
+      "title": "Lead Technologist",
+      "start": "Feb 2025",
+      "end": "Present",
+      "description": "I drive technical innovation by evaluating and selecting cutting-edge technologies, designing solutions to meet strategic company goals, delivering hands-on expertise. I plan detailed technical investments and collaborate with teams to align efforts, bridging vision with execution to propel our success."
+    },
+    {
+      "company": "Glui",
+      "link": "",
+      "badges": ["Remote", "Asunción, Paraguay"],
+      "title": "Lead Backend Engineer",
+      "start": "Oct 2024",
+      "end": "Feb 2025",
+      "description": "Established great developer ownership practices by implementing trunk based development and E2E testing practices that led to atomic and production ready contributions with every commit."
+    },
+    {
+      "company": "Glui",
+      "link": "",
+      "badges": ["Asunción, Paraguay"],
+      "title": "Software Engineer",
+      "start": "May 2024",
+      "end": "Sep 2024",
+      "description": "Implemented a CI/CD pipeline with several tiers of testing and fully automated deployments of containerized applications.\nCollaborated in the design of a microservice architecture, and implemented container based applications, using NestJS and Typescript.\nActively documented the software development process and best practices, including writing technical design documents, technology selection and implementation."
+    },
+    {
       company: "Clipboard Health",
       link: "https://www.clipboardhealth.com",
       badges: ["Remote", "AWS"],
