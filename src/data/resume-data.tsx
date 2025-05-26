@@ -1,14 +1,60 @@
 import { GitHubIcon, LinkedInIcon, XIcon } from "@/components/icons";
 
-export const RESUME_DATA = {
+// Explicit type for RESUME_DATA
+export type ResumeData = {
+  name: string;
+  initials: string;
+  location: string;
+  locationLink: string;
+  about: string;
+  summary: string;
+  avatarUrl: string;
+  personalWebsiteUrl: string;
+  resumeUrl: string;
+  contact: {
+    email: string;
+    social: {
+      name: string;
+      url: string;
+      icon: React.ComponentType<{ className?: string }>;
+    }[];
+  };
+  education: {
+    school: string;
+    degree: string;
+    start: string;
+    end: string;
+  }[];
+  work: {
+    company: string;
+    link: string;
+    badges: string[];
+    title: string;
+    start: string;
+    end: string;
+    description: string;
+  }[];
+  skills: string[];
+  projects: {
+    title: string;
+    techStack: string[];
+    description: string;
+    link?: {
+      label: string;
+      href: string;
+    };
+  }[];
+};
+
+export const RESUME_DATA: ResumeData = {
   name: "Galileo Sanchez",
   initials: "GS",
   location: "Asunción, Paraguay, America/Asuncion (GMT-4)",
   locationLink: "https://www.google.com/maps/place/Asunción",
   about:
-  "Full Stack Engineer focused on building reliable and scalable products.",
+    "Full Stack Engineer focused on building reliable and scalable products.",
   summary:
-  "Currently, I primarily work with TypeScript, React, and Node.js. I bring 10 years of experience in application development, along with over 4 years of experience in remote collaboration with companies globally.",
+    "Currently, I primarily work with TypeScript, React, and Node.js. I bring 10 years of experience in application development, along with over 4 years of experience in remote collaboration with companies globally.",
   avatarUrl: "https://avatars.githubusercontent.com/u/7267587?v=4",
   personalWebsiteUrl: "galileopy.com.py",
   resumeUrl: "cv.galileopy.com.py",
@@ -42,55 +88,62 @@ export const RESUME_DATA = {
   ],
   work: [
     {
-      "company": "Glui",
-      "link": "",
-      "badges": ["Remote"],
-      "title": "Lead Technologist",
-      "start": "Feb 2025",
-      "end": "Present",
-      "description": "I drive technical innovation by evaluating and selecting cutting-edge technologies, designing solutions to meet strategic company goals, delivering hands-on expertise. I plan detailed technical investments and collaborate with teams to align efforts, bridging vision with execution to propel our success."
+      company: "Glui",
+      link: "",
+      badges: ["Remote"],
+      title: "Lead Technologist",
+      start: "Feb 2025",
+      end: "Present",
+      description:
+        "I drive technical innovation by evaluating and selecting cutting-edge technologies, designing solutions to meet strategic company goals, delivering hands-on expertise. I plan detailed technical investments and collaborate with teams to align efforts, bridging vision with execution to propel our success.",
     },
     {
-      "company": "Glui",
-      "link": "",
-      "badges": ["Remote", "Asunción, Paraguay"],
-      "title": "Lead Backend Engineer",
-      "start": "Oct 2024",
-      "end": "Feb 2025",
-      "description": "Established great developer ownership practices by implementing trunk based development and E2E testing practices that led to atomic and production ready contributions with every commit."
+      company: "Glui",
+      link: "",
+      badges: ["Remote", "Asunción, Paraguay"],
+      title: "Lead Backend Engineer",
+      start: "Oct 2024",
+      end: "Feb 2025",
+      description:
+        "Established great developer ownership practices by implementing trunk based development and E2E testing practices that led to atomic and production ready contributions with every commit.",
     },
     {
-      "company": "Glui",
-      "link": "",
-      "badges": ["Asunción, Paraguay"],
-      "title": "Software Engineer",
-      "start": "May 2024",
-      "end": "Sep 2024",
-      "description": "Implemented a CI/CD pipeline with several tiers of testing and fully automated deployments of containerized applications.\nCollaborated in the design of a microservice architecture, and implemented container based applications, using NestJS and Typescript.\nActively documented the software development process and best practices, including writing technical design documents, technology selection and implementation."
+      company: "Glui",
+      link: "",
+      badges: ["Asunción, Paraguay"],
+      title: "Software Engineer",
+      start: "May 2024",
+      end: "Sep 2024",
+      description:
+        "Implemented a CI/CD pipeline with several tiers of testing and fully automated deployments of containerized applications.\nCollaborated in the design of a microservice architecture, and implemented container based applications, using NestJS and Typescript.\nActively documented the software development process and best practices, including writing technical design documents, technology selection and implementation.",
     },
-    
-  {
-    "company": "Clipboard Health",
-    "link": "https://www.clipboardhealth.com",
-    "badges": ["Remote"],
-    "title": "Senior Software Engineer",
-    "start": "Dec 2022",
-    "end": "Nov 2023",
-    "description": "Led a team in implementing event-driven microservices utilizing Change Data Capture (CDC) and probability models to predict unfulfilled demand in advance. This allowed for proactive offer pre-allocation, ensuring swift offer replacements and delivering an exceptional user experience.\nLed multiple technical experiments aimed at reducing customer churn and improving offer availability. Oversaw initiatives to monitor significant market shifts and prioritize them, using strategies such as personalized notifications, automated incentives, and user targeting based on preferences and behavior. Managed microservices projects from inception to completion, covering design, planning, and execution.\nCollaborated across diverse teams to ensure the successful delivery of projects.\nActively participated in the engineering team’s hiring process, encompassing interviewing and onboarding new hires. Conducted over 50 interviews and reviewed more ECHO than 100 technical challenges."
-  },
-  {
-    "company": "Clipboard Health",
-    "link": "https://www.clipboardhealth.com",
-    "badges": ["Paraguay"],
-    "title": "Software Development Engineer",
-    "start": "Nov 2021",
-    "end": "Feb 2023",
-    "description": "Established and led a new developer team, representing the product interests of the finance and billing team. Prioritized and addressed mission critical bugs related to invoicing.\nCompletely revamped the infrastructure supporting invoicing, migrating mission critical sub-systems from error prone, low-code services into in-house event-driven microservices, with 0 downtime.\nAssisted in the migration of a large monolithic application into independent repositories. I took full ownership of the front-end extraction during this process."
-  },
+
+    {
+      company: "Clipboard Health",
+      link: "https://www.clipboardhealth.com",
+      badges: ["Remote"],
+      title: "Senior Software Engineer",
+      start: "Dec 2022",
+      end: "Nov 2023",
+      description:
+        "Led a team in implementing event-driven microservices utilizing Change Data Capture (CDC) and probability models to predict unfulfilled demand in advance. This allowed for proactive offer pre-allocation, ensuring swift offer replacements and delivering an exceptional user experience.\nLed multiple technical experiments aimed at reducing customer churn and improving offer availability. Oversaw initiatives to monitor significant market shifts and prioritize them, using strategies such as personalized notifications, automated incentives, and user targeting based on preferences and behavior. Managed microservices projects from inception to completion, covering design, planning, and execution.\nCollaborated across diverse teams to ensure the successful delivery of projects.\nActively participated in the engineering team’s hiring process, encompassing interviewing and onboarding new hires. Conducted over 50 interviews and reviewed more ECHO than 100 technical challenges.",
+    },
+    {
+      company: "Clipboard Health",
+      link: "https://www.clipboardhealth.com",
+      badges: ["Paraguay"],
+      title: "Software Development Engineer",
+      start: "Nov 2021",
+      end: "Feb 2023",
+      description:
+        "Established and led a new developer team, representing the product interests of the finance and billing team. Prioritized and addressed mission critical bugs related to invoicing.\nCompletely revamped the infrastructure supporting invoicing, migrating mission critical sub-systems from error prone, low-code services into in-house event-driven microservices, with 0 downtime.\nAssisted in the migration of a large monolithic application into independent repositories. I took full ownership of the front-end extraction during this process.",
+    },
 
     {
       company: "Jijo",
       badges: ["Remote", "React"],
+      link: "",
+
       title: "Software Engineer",
       start: "2021",
       end: "2021",
@@ -127,8 +180,6 @@ export const RESUME_DATA = {
       description:
         "Helped several companies to bootstrap products working with a wide range of technologies like C#, Java, Python (Django)",
     },
-
-    ,
   ],
   skills: [
     "JavaScript",
@@ -194,4 +245,4 @@ export const RESUME_DATA = {
         "Fetch Shopify orders and generate a PDF with the order details. Built with React, Node.js, and Electron.js.",
     },
   ],
-} as const;
+};

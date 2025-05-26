@@ -13,6 +13,20 @@ export const metadata: Metadata = {
   title: `${RESUME_DATA.name} | ${RESUME_DATA.about}`,
   description: RESUME_DATA.summary,
 };
+interface Work {
+  company: string;
+  link: string;
+  badges: string[];
+  title: string;
+  start: string;
+  end: string;
+  description: string;
+}
+interface CompanyGroup {
+  link: string;
+  badges: Set<string>;
+  entries: Work[];
+}
 
 export default function Page() {
   return (
@@ -39,12 +53,12 @@ export default function Page() {
                 className="inline-flex gap-x-1.5 align-baseline leading-none hover:underline"
                 href={RESUME_DATA.resumeUrl}
                 target="_blank"
-              > 
-              Resume
+              >
+                Resume
               </a>
             </p>
             <div className="flex gap-x-1 pt-1 font-mono text-sm text-muted-foreground print:hidden">
-            {RESUME_DATA.contact.email ? (
+              {RESUME_DATA.contact.email ? (
                 <Button
                   className="size-8"
                   variant="outline"
@@ -85,49 +99,74 @@ export default function Page() {
         </Section>
         <Section>
           <h2 className="text-xl font-bold">Work Experience</h2>
-          {RESUME_DATA.work.map((work) => {
-            return (
-              work && (
-                <Card key={work.company}>
-                  <CardHeader>
-                    <div className="flex items-center justify-between gap-x-2 text-base">
-                      <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">
-                        {"link" in work ? (
-                          <a className="hover:underline" href={work.link}>
-                            {work.company}
-                          </a>
-                        ) : (
-                          work.company
-                        )}
-
-                        <span className="inline-flex gap-x-1">
-                          {work.badges.map((badge) => (
-                            <Badge
-                              variant="secondary"
-                              className="align-middle text-xs"
-                              key={badge}
-                            >
-                              {badge}
-                            </Badge>
-                          ))}
-                        </span>
-                      </h3>
+          {/* Group work entries by company */}
+          {Object.entries(
+            RESUME_DATA.work.reduce(
+              (acc, work) => {
+                if (!acc[work!.company]) {
+                  acc[work!.company] = {
+                    link: work!.link || "",
+                    badges: new Set(),
+                    entries: [],
+                  };
+                }
+                // Fix: Add each badge individually to the Set
+                (work?.badges ?? []).forEach((badge) =>
+                  acc[work!.company].badges.add(badge),
+                );
+                acc[work!.company].entries.push(work as Work); // Add entry to company
+                return acc;
+              },
+              {} as Record<string, CompanyGroup>,
+            ),
+          ).map(([company, { link, badges, entries }]) => (
+            <Card key={company} className="mb-4">
+              <CardHeader>
+                <div className="flex items-center justify-between gap-x-2 text-base">
+                  <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">
+                    {link ? (
+                      <a className="hover:underline" href={link}>
+                        {company}
+                      </a>
+                    ) : (
+                      company
+                    )}
+                    <span className="inline-flex gap-x-1">
+                      {[...badges].map((badge) => (
+                        <Badge
+                          variant="secondary"
+                          className="align-middle text-xs"
+                          key={badge}
+                        >
+                          {badge}
+                        </Badge>
+                      ))}
+                    </span>
+                  </h3>
+                </div>
+              </CardHeader>
+              <CardContent>
+                {/* Render each role within the company */}
+                {entries.map((work, index) => (
+                  <div key={`${work.title}-${work.start}`} className="mb-4">
+                    <div className="flex items-center justify-between">
+                      <h4 className="text-md font-mono font-bold leading-none">
+                        {work.title}
+                      </h4>
                       <div className="text-sm tabular-nums text-gray-500">
                         {work.start} - {work.end}
                       </div>
                     </div>
-
-                    <h4 className="font-mono text-sm leading-none">
-                      {work.title}
-                    </h4>
-                  </CardHeader>
-                  <CardContent className="mt-2 text-xs">
-                    {work.description}
-                  </CardContent>
-                </Card>
-              )
-            );
-          })}
+                    <ul className="mt-2 list-inside list-disc text-xs">
+                      {work.description.split("\n").map((line, i) => (
+                        <li key={i}>{line.trim()}</li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </CardContent>
+            </Card>
+          ))}
         </Section>
         <Section>
           <h2 className="text-xl font-bold">Education</h2>
@@ -168,7 +207,7 @@ export default function Page() {
                   title={project.title}
                   description={project.description}
                   tags={project.techStack}
-                  link={"link" in project ? project.link.href : undefined}
+                  link={"link" in project ? project?.link?.href : undefined}
                 />
               );
             })}
