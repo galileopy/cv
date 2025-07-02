@@ -87,7 +87,7 @@ export const RESUME_DATA: ResumeData = {
       start: "Feb 2025",
       end: "Present",
       description:
-        "Led CI/CD and observability stack design; shipped test-context SDKs and custom tooling for marketplace test environments.\nGuided and oversaw k6 load testing to validate event capturing setup up to 80M requests/day.",
+        "Shipped test-context helpers and tooling for test environments.\nGuided and oversaw k6 load testing to validate event capturing setup up to 80M requests/day.",
     },
     {
       company: "Glui",
@@ -97,7 +97,7 @@ export const RESUME_DATA: ResumeData = {
       start: "Oct 2024",
       end: "Feb 2025",
       description:
-        "Built 15-minute deployment pipeline via GitHub Actions, Docker, Cycle.io.\nDeployed Keycloak for centralized auth; managed observability and resilience.\nDelivered core backend services using NestJS for a real-time marketplace.",
+        "Built 10-minute deployment pipeline via GitHub Actions, Docker, Cycle.io.\nDelivered core backend services using NestJS for a real-time marketplace.",
     },
     {
       company: "Glui",
@@ -107,7 +107,7 @@ export const RESUME_DATA: ResumeData = {
       start: "May 2024",
       end: "Sep 2024",
       description:
-        "Created container-based CI pipelines and deployment flows with fast feedback cycles.\nDrove service modularization and platform reliability improvements."
+        "Created container-based CI pipelines and deployment flows with fast feedback cycles.\nDeployed Keycloak for centralized auth."
     },
     {
       company: "Clipboard Health",
