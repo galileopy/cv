@@ -35,26 +35,18 @@ export type ResumeData = {
     description: string;
   }[];
   skills: string[];
-  projects: {
-    title: string;
-    techStack: string[];
-    description: string;
-    link?: {
-      label: string;
-      href: string;
-    };
-  }[];
+  philosophy: string[];
 };
 
 export const RESUME_DATA: ResumeData = {
   name: "Galileo Sanchez",
   initials: "GS",
-  location: "Asunción, Paraguay, America/Asuncion (GMT-4)",
+  location: "Remote, from Asunción, Paraguay",
   locationLink: "https://www.google.com/maps/place/Asunción",
   about:
-    "Full Stack Engineer focused on building reliable and scalable products.",
+    "Action-oriented backend engineer focused on CI/CD automation and scalable systems.",
   summary:
-    "Currently, I primarily work with TypeScript, React, and Node.js. I bring 10 years of experience in application development, along with over 4 years of experience in remote collaboration with companies globally.",
+    "Action-oriented backend engineer with 10+ years of experience building scalable systems and optimizing engineering workflows. I specialize CI/CD automation, event-driven microservices, and developer tooling. My work consistently improves deploy speed, feedback loops, and platform reliability—whether refactoring legacy code into composable services or instrumenting pipelines with clear performance metrics. I thrive in environments with clear goals, collaborative iteration, and freedom to experiment.",
   avatarUrl: "https://avatars.githubusercontent.com/u/7267587?v=4",
   personalWebsiteUrl: "galileopy.com.py",
   resumeUrl: "cv.galileopy.com.py",
@@ -81,9 +73,9 @@ export const RESUME_DATA: ResumeData = {
   education: [
     {
       school: "National University of Asunción",
-      degree: "Software Engineer",
+      degree: "Software Engineering - Completed core CS curriculum (excluding advanced mathematics). Focus on software development, algorithms, and backend systems.",
       start: "2009",
-      end: "2013 - 60% completion",
+      end: "2013",
     },
   ],
   work: [
@@ -95,29 +87,28 @@ export const RESUME_DATA: ResumeData = {
       start: "Feb 2025",
       end: "Present",
       description:
-        "I drive technical innovation by evaluating and selecting cutting-edge technologies, designing solutions to meet strategic company goals, delivering hands-on expertise. I plan detailed technical investments and collaborate with teams to align efforts, bridging vision with execution to propel our success.",
+        "Led CI/CD and observability stack design; shipped test-context SDKs and custom tooling for marketplace test environments.\nGuided and oversaw k6 load testing to validate event capturing setup up to 80M requests/day.",
     },
     {
       company: "Glui",
       link: "",
-      badges: ["Remote", "Asunción, Paraguay"],
+      badges: ["Remote"],
       title: "Lead Backend Engineer",
       start: "Oct 2024",
       end: "Feb 2025",
       description:
-        "Established great developer ownership practices by implementing trunk based development and E2E testing practices that led to atomic and production ready contributions with every commit.",
+        "Built 15-minute deployment pipeline via GitHub Actions, Docker, Cycle.io.\nDeployed Keycloak for centralized auth; managed observability and resilience.\nDelivered core backend services using NestJS for a real-time marketplace.",
     },
     {
       company: "Glui",
       link: "",
-      badges: ["Asunción, Paraguay"],
+      badges: ["Remote"],
       title: "Software Engineer",
       start: "May 2024",
       end: "Sep 2024",
       description:
-        "Implemented a CI/CD pipeline with several tiers of testing and fully automated deployments of containerized applications.\nCollaborated in the design of a microservice architecture, and implemented container based applications, using NestJS and Typescript.\nActively documented the software development process and best practices, including writing technical design documents, technology selection and implementation.",
+        "Created container-based CI pipelines and deployment flows with fast feedback cycles.\nDrove service modularization and platform reliability improvements."
     },
-
     {
       company: "Clipboard Health",
       link: "https://www.clipboardhealth.com",
@@ -126,123 +117,83 @@ export const RESUME_DATA: ResumeData = {
       start: "Dec 2022",
       end: "Nov 2023",
       description:
-        "Led a team in implementing event-driven microservices utilizing Change Data Capture (CDC) and probability models to predict unfulfilled demand in advance. This allowed for proactive offer pre-allocation, ensuring swift offer replacements and delivering an exceptional user experience.\nLed multiple technical experiments aimed at reducing customer churn and improving offer availability. Oversaw initiatives to monitor significant market shifts and prioritize them, using strategies such as personalized notifications, automated incentives, and user targeting based on preferences and behavior. Managed microservices projects from inception to completion, covering design, planning, and execution.\nCollaborated across diverse teams to ensure the successful delivery of projects.\nActively participated in the engineering team’s hiring process, encompassing interviewing and onboarding new hires. Conducted over 50 interviews and reviewed more than 100 technical challenges.",
+        "Migrated invoicing to event-driven microservices, reducing processing time from 2 days to 2 hours.\nLed debugging of CDC performance issues and live-stream bottlenecks.\nInstrumented and iterated k6 load testing to optimize delivery workflows.",
     },
     {
       company: "Clipboard Health",
       link: "https://www.clipboardhealth.com",
-      badges: ["Paraguay"],
+      badges: ["Remote"],
       title: "Software Development Engineer",
       start: "Nov 2021",
       end: "Feb 2023",
       description:
-        "Established and led a new developer team, representing the product interests of the finance and billing team. Prioritized and addressed mission critical bugs related to invoicing.\nCompletely revamped the infrastructure supporting invoicing, migrating mission critical sub-systems from error prone, low-code services into in-house event-driven microservices, with 0 downtime.\nAssisted in the migration of a large monolithic application into independent repositories. I took full ownership of the front-end extraction during this process.",
+        "Extracted React front-end from monolith into standalone repo. With 0 downtime for over 100 collaborators.\nRefactored low-code invoicing logic into maintainable services.",
     },
-
     {
       company: "Jijo",
-      badges: ["Remote", "React"],
+      badges: ["Remote"],
       link: "",
-
       title: "Software Engineer",
       start: "2021",
       end: "2021",
-      description: `Front-end engineer in a 2-sided marketplace that matches remote trainers with trainees. We featured a web and mobile applications with support for video calls, payments, scheduling.
-         Built with React, Next.js, and Chime SDK."`,
+      description:
+        "Developed Stripe payments, class booking UI, and conference integration using Chime SDK.\nDelivered complete feature flows in weekly iterations with autonomy.",
     },
     {
       company: "National Computing Center",
       link: "https://www.cnc.una.py",
-      badges: ["React"],
-      title: "Fullstack Software Engineer",
+      badges: ["Remote"],
+      title: "Full Stack Software Engineer",
       start: "2018",
       end: "2020",
       description:
-        "Fully owned the development and timely release for a paperless personnel clock in/out platform with modules for leave requests and compliance with leave policy.",
+        "Built React-based personnel tracking platform for 500+ users.\nFully owned feature delivery and compliance workflows.",
     },
     {
       company: "Trivellini Tech",
       link: "https://wwww.trivellinitech.com",
-      badges: ["QT/C++", "RPI"],
+      badges: ["Remote"],
       title: "Software Engineer",
       start: "2017",
       end: "2018",
       description:
-        "Built the front-end of a surgical device using RPI and C++/Qt, implementing event driven patterns with QT/Signals and its event system.",
+        "Built real-time Qt/C++ UI for surgical device monitors with responsive protocol layer.\nWorked closely with hardware teams on cross-functional integration.",
     },
     {
-      company: "Freelancer",
-      badges: ["Freelance", "C#", "Java", "Python"],
+      company: "Freelance",
+      badges: ["Remote"],
       link: "https://galileopy.com.py",
-      title: "Full Stack Engineer",
+      title: "Full Stack Developer",
       start: "2014",
       end: "2017",
       description:
-        "Helped several companies to bootstrap products working with a wide range of technologies like C#, Java, Python (Django)",
+        "Created Electron/React Shopify label generator.\nDelivered backend services, UIs, and integrations using Django and AngularJS.",
     },
   ],
   skills: [
-    "JavaScript",
     "TypeScript",
+    "JavaScript", 
     "React/Next.js",
     "Node.js",
     "NestJS",
-    "AWS",
-    "Terraform",
+    "C++/Qt",
     "Docker",
-    "Aurora RDS",
-    "SQS and EventBridge",
+    "AWS (ECS, RDS, SQS, EventBridge)",
+    "Terraform",
+    "GitHub Actions",
+    "k6",
     "PostgreSQL",
-    "ECS",
+    "Aurora RDS",
+    "CouchDB",
     "Datadog",
     "Stripe",
   ],
-  projects: [
-    {
-      title: "Buses 365",
-      techStack: ["Side Project", "TypeScript", "Next.js", "Vercel"],
-      description:
-        "A platform to help people find the long distance bus schedules from my country and surrounding countries. Built with Next.js and Vercel.",
-      link: {
-        label: "buses365.com.py",
-        href: "https://buses365.com.py/",
-      },
-    },
-    {
-      title: "Jaikuaamina",
-      techStack: [
-        "ReactNative",
-        "Node.js",
-        "CouchDB",
-        "Ministry of Technology and Communication (MITIC)",
-        "hackathon",
-      ],
-      description:
-        "Award winning open source application that helps citizens generate public data requests. Built with React Native, Node.js, and CouchDB.",
-    },
-    {
-      title: "Uppy Trip Search",
-      techStack: [
-        "FireStore",
-        "Node.js",
-        "Event Streams",
-        "docker",
-        "contract",
-      ],
-      description:
-        "Backend system to find the closest driver based on GPS location using Fire Store and Event Streams",
-    },
-    {
-      title: "Electronic Prescription System",
-      techStack: ["Remote", "React", "Node.js", "PostgreSQL", "contract"],
-      description:
-        "During the pandemic I helped Itaipu Binacional to build an electronic, paperless, and contactless prescription system for their clinics. Built with React, Node.js, and PostgreSQL.",
-    },
-    {
-      title: "Shopify Order PDF Generator",
-      techStack: ["electron.js", "React", "Node.js", "contract"],
-      description:
-        "Fetch Shopify orders and generate a PDF with the order details. Built with React, Node.js, and Electron.js.",
-    },
+  philosophy: [
+    "Biased toward action: quick iteration cycles and small wins that compound",
+    "Deep focus on fast feedback loops and system observability",
+    "Comfortable owning CI/CD and system plumbing work others avoid",
+    "Thrive when collaborating with thoughtful PMs and clear goals",
+    "Struggle with premature planning, vague deliverables, or performative coordination",
+    "Seek ownership over implementation, not politics or layers of indirection",
   ],
 };

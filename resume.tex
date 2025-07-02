@@ -1,0 +1,199 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{fontspec}
+\usepackage{tabularx}
+\usepackage{array}
+
+% Set main font - Classic serif font for professional appearance
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+% Use Roman (serif) as default - removes the \sfdefault which was making it sans-serif
+
+% Configure hyperlinks
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+    pdftitle={Galileo Sanchez - Resume},
+    pdfauthor={Galileo Sanchez}
+}
+
+% Define colors
+\definecolor{darkgray}{gray}{0.2}
+\definecolor{mediumgray}{gray}{0.5}
+\definecolor{lightgray}{gray}{0.8}
+\definecolor{actioncolor}{RGB}{44, 62, 80}
+
+% Remove page numbers
+\pagestyle{empty}
+
+% Custom section formatting
+\titleformat{\section}
+  {\large\bfseries\color{darkgray}}
+  {}
+  {0em}
+  {}[\textcolor{lightgray}{\titlerule[0.8pt]}]
+
+\titleformat{\subsection}
+  {\normalsize\bfseries}
+  {}
+  {0em}
+  {}
+
+% Reduce spacing
+\titlespacing*{\section}{0pt}{1.5em}{0.8em}
+\titlespacing*{\subsection}{0pt}{1em}{0.5em}
+
+% Custom list formatting
+\setlist[itemize]{leftmargin=1.2em, topsep=0pt, itemsep=3pt, parsep=0pt}
+
+% Define a more prominent bold command for action verbs
+\newcommand{\actionverb}[1]{\textcolor{actioncolor}{\textbf{#1}}}
+
+% Custom commands
+\newcommand{\cvheader}[5]{
+  \begin{center}
+    {\Huge \textbf{#1}}\\[0.4em]
+    {\Large \textcolor{darkgray}{#2}}\\[1em]
+    
+    \textcolor{mediumgray}{#3}\\[0.6em]
+    
+    \begin{tabular}{c}
+      \href{mailto:#4}{#4} $\bullet$ \href{https://#5}{#5}\\[0.3em]
+      \href{https://github.com/galileopy}{github.com/galileopy} $\bullet$ 
+      \href{https://www.linkedin.com/in/galileopy}{linkedin.com/in/galileopy}
+    \end{tabular}
+  \end{center}
+  \vspace{1.2em}
+}
+
+\newcommand{\cvcompany}[3]{
+  \subsection{#1 \textcolor{mediumgray}{#2}}
+  #3
+  \vspace{0.5em}
+}
+
+\newcommand{\cvrole}[4]{
+  \textbf{#1} \hfill \textcolor{mediumgray}{\small #2}\\
+  \textit{#3}
+  \begin{itemize}
+    #4
+  \end{itemize}
+  \vspace{1em}
+}
+
+\newcommand{\cveducation}[4]{
+  \subsection{#1}
+  \textbf{#2} \hfill \textcolor{mediumgray}{\small #3}
+  \begin{itemize}
+    \item #4
+  \end{itemize}
+}
+
+\begin{document}
+
+% Header
+\cvheader{Galileo Sanchez}{Lead Backend Engineer}{Remote, from Asunción, Paraguay}{galileo@galileopy.com.py}{cv.galileopy.com.py}
+
+% About/Summary
+\section{About}
+Lead Backend Engineer with 10+ years of experience specializing in performance optimization, CI/CD automation, and rapid iteration cycles. Building robust CI/CD pipelines with 10-minute deployments, and refactoring legacy systems into scalable microservices. Thrives in environments with clear goals, fast feedback loops, and collaborative problem-solving.
+
+% Work Experience
+\section{Work Experience}
+
+\cvcompany{Glui}{-- \textit{U.S.-based global startup}}{
+  \cvrole{Lead Technologist}{Feb 2025--Present}{Remote, from Asunción, Paraguay}{
+    \item \actionverb{Architected} Event capturing system and K6 testing framework, validating system capacity for 80M requests/day scalability
+    \item \actionverb{Pioneered} CI/CD optimization initiatives, designing custom test-context SDK and scenario helpers that accelerated development cycles
+    \item \actionverb{Streamlined} container image build processes and deployment pipelines, focusing on feedback loop optimization for development velocity
+  }
+  
+  \cvrole{Lead Backend Engineer}{Oct 2024--Feb 2025}{Remote, from Asunción, Paraguay}{
+    \item \actionverb{Engineered} complete CI/CD pipeline using GitHub Actions, Docker, and Cycle.io, achieving 10-minute deployment cycles from merge to production, with reliable testing
+    \item \actionverb{Designed} scalable NestJS microservices architecture for marketplace backend, emphasizing modularity and performance
+    \item \actionverb{Implemented} Keycloak authentication system with comprehensive monitoring and maintenance protocols
+  }
+  
+  \cvrole{Software Engineer}{May 2024--Sep 2024}{Remote, from Asunción, Paraguay}{
+    \item \actionverb{Built} containerized CI/CD infrastructure using Docker and GitHub Actions, establishing reliable automated release processes
+    \item \actionverb{Developed} containerized NestJS applications with focus on system reliability and rapid iteration capabilities
+  }
+}
+
+\cvcompany{Clipboard Health}{-- \textit{U.S.-based global startup}}{
+  \cvrole{Senior Software Engineer}{Dec 2022--Nov 2023}{Remote, from Asunción, Paraguay}{
+    \item \actionverb{Implemented} comprehensive error tracking and automatic retry mechanisms, dramatically improving system reliability
+    \item \actionverb{Optimized} notification system for healthcare worker rate optimization using systematic testing and performance analysis
+    \item \actionverb{Established} robust testing frameworks and performance monitoring systems using K6 and systematic bottleneck analysis
+  }
+  
+  \cvrole{Software Development Engineer}{Nov 2021--Feb 2023}{Remote, from Asunción, Paraguay}{
+    \item \actionverb{Refactored} monolithic frontend into modular React repository, improving development velocity and maintainability
+    \item \actionverb{Debugged} critical invoicing system issues, applying systematic problem-solving approaches to enhance healthcare financial systems
+    \item \actionverb{Transformed} legacy invoicing system into event-driven microservices architecture, achieving 95\% processing time reduction (2 days to 2 hours) for 5,000+ weekly invoices
+  }
+}
+
+\cvcompany{Jijo}{-- \textit{U.S.-based global startup}}{
+  \cvrole{Software Engineer}{2021}{Remote, from Asunción, Paraguay}{
+    \item \actionverb{Developed} complete Stripe payment integration with booking interface and Redux state management for marketplace platform
+    \item \actionverb{Built} Chime SDK-based conference studio enabling trainers to broadcast live classes with real-time interaction capabilities
+    \item \actionverb{Delivered} feature-complete solutions through iterative development with clear success criteria and rapid feedback cycles
+  }
+}
+
+\cvcompany{National Computing Center}{}{
+  \cvrole{Full Stack Software Engineer}{2018--2020}{Remote, from Asunción, Paraguay}{
+    \item \actionverb{Engineered} React-based employee management platform handling clock-in/out and leave requests for 500+ employees
+    \item \actionverb{Owned} complete development lifecycle from conception to deployment, ensuring policy compliance and system reliability
+  }
+}
+
+\cvcompany{Trivellini Tech}{}{
+  \cvrole{Software Engineer}{2017--2018}{Remote, from Asunción, Paraguay}{
+    \item \actionverb{Developed} real-time C++/Qt frontend for surgical devices using Qt Signals for responsive monitoring systems
+    \item \actionverb{Collaborated} directly with hardware engineers to optimize device responsiveness and establish clear communication protocols
+    \item \actionverb{Thrived} in flexible, results-oriented environment with organic scheduling and collaborative problem-solving
+  }
+}
+
+\cvcompany{Freelancer}{}{
+  \cvrole{Full Stack Engineer}{2014--2017}{Remote, from Asunción, Paraguay}{
+    \item \actionverb{Built} Angular/Django HR system for career planning with clear client requirements and iterative feedback
+    \item \actionverb{Developed} Electron/React Shopify integration for automated label processing, solving specific client workflow challenges
+  }
+}
+
+% Education
+\section{Education}
+
+\cveducation{National University of Asunción}{Software Engineering}{2009--2013}{Completed CS-related curricula, excluding advanced mathematics. Studied software development, algorithms, and database systems for robust backend solutions.}
+
+% Core Strengths
+\section{Core Strengths}
+
+\begin{itemize}
+  \item \textbf{Performance Optimization \& Debugging}: Expertise in K6 load testing, bottleneck analysis, and live system debugging
+  \item \textbf{CI/CD Pipeline Design}: Building fast, reliable deployment systems with Docker, GitHub Actions, and automated testing
+  \item \textbf{System Refactoring}: Transforming legacy codebases into composable, maintainable architectures
+  \item \textbf{Rapid Prototyping}: Bias for action approach to problem-solving with iterative improvement cycles
+  \item \textbf{Cross-functional Collaboration}: Working effectively with product owners, PMs, and domain experts to define clear success criteria
+\end{itemize}
+
+% Technical Skills
+\section{Technical Skills}
+
+\textbf{Performance \& Optimization:} K6 Load Testing, System Debugging, Performance Analysis, Bottleneck Identification\\[0.4em]
+\textbf{Backend Development:} TypeScript, Node.js, NestJS, Event-Driven Architecture, Microservices\\[0.4em]
+\textbf{DevOps \& CI/CD:} Docker, GitHub Actions, Terraform, AWS ECS, Pipeline Optimization\\[0.4em]
+\textbf{Databases:} PostgreSQL, ClickHouse, Aurora RDS\\[0.4em]
+\textbf{Frontend:} React, Next.js, Qt/C++\\[0.4em]
+\textbf{Cloud \& Infrastructure:} AWS, SQS/EventBridge, Datadog\\[0.4em]
+\textbf{Integration:} Stripe, Keycloak
+
+\end{document}

@@ -1,0 +1,191 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{fontspec}
+\usepackage{tabularx}
+\usepackage{array}
+
+% Set main font - Classic serif font for professional appearance
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+% Use Roman (serif) as default - removes the \sfdefault which was making it sans-serif
+
+% Configure hyperlinks
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+    pdftitle={Galileo Sanchez - Resume},
+    pdfauthor={Galileo Sanchez}
+}
+
+% Define colors
+\definecolor{darkgray}{gray}{0.2}
+\definecolor{mediumgray}{gray}{0.5}
+\definecolor{lightgray}{gray}{0.8}
+
+% Remove page numbers
+\pagestyle{empty}
+
+% Custom section formatting
+\titleformat{\section}
+  {\large\bfseries\color{darkgray}}
+  {}
+  {0em}
+  {}[\textcolor{lightgray}{\titlerule[0.8pt]}]
+
+\titleformat{\subsection}
+  {\normalsize\bfseries}
+  {}
+  {0em}
+  {}
+
+% Reduce spacing
+\titlespacing*{\section}{0pt}{1.5em}{0.8em}
+\titlespacing*{\subsection}{0pt}{1em}{0.5em}
+
+% Custom list formatting
+\setlist[itemize]{leftmargin=1.2em, topsep=0pt, itemsep=3pt, parsep=0pt}
+
+% Custom commands
+\newcommand{\cvheader}[5]{
+  \begin{center}
+    {\Huge \textbf{#1}}\\[0.4em]
+    {\Large \textcolor{darkgray}{#2}}\\[1em]
+    
+    \textcolor{mediumgray}{#3}\\[0.6em]
+    
+    \begin{tabular}{c}
+      \href{mailto:#4}{#4} $\bullet$ \href{https://#5}{#5}\\[0.3em]
+      \href{https://github.com/galileopy}{github.com/galileopy} $\bullet$ 
+      \href{https://www.linkedin.com/in/galileopy}{linkedin.com/in/galileopy}
+    \end{tabular}
+  \end{center}
+  \vspace{1.2em}
+}
+
+\newcommand{\cvcompany}[3]{
+  \subsection{#1 \textcolor{mediumgray}{#2}}
+  #3
+  \vspace{0.5em}
+}
+
+\newcommand{\cvrole}[4]{
+  \textbf{#1} \hfill \textcolor{mediumgray}{\small #2}\\
+  \textit{#3}
+  \begin{itemize}
+    #4
+  \end{itemize}
+  \vspace{0.4em}
+}
+
+\newcommand{\cveducation}[4]{
+  \subsection{#1}
+  \textbf{#2} \hfill \textcolor{mediumgray}{\small #3}
+  \begin{itemize}
+    \item #4
+  \end{itemize}
+}
+
+\begin{document}
+
+% Header
+\cvheader{Galileo Sanchez}{Lead Backend Engineer}{Remote, based in Asunción, Paraguay}{galileo@galileopy.com.py}{cv.galileopy.com.py}
+
+% About/Summary
+\section{About}
+Action-oriented backend engineer with 10+ years of experience building scalable systems and optimizing engineering workflows. I specialize CI/CD automation, event-driven microservices, and developer tooling. My work consistently improves deploy speed, feedback loops, and platform reliability—whether refactoring legacy code into composable services or instrumenting pipelines with clear performance metrics. I thrive in environments with clear goals, collaborative iteration, and freedom to experiment.
+
+% Work Experience
+\section{Experience}
+
+\cvcompany{Glui}{-- \textit{U.S.-based startup}}{
+  \cvrole{Lead Technologist}{Feb 2025--Present}{Remote}{
+    \item Led CI/CD and observability stack design; shipped test-context SDKs and custom tooling for test environments.
+    \item Guided and oversaw k6 load testing to validate event capturing setup up to 80M requests/day.
+  }
+  
+  \cvrole{Lead Backend Engineer}{Oct 2024--Feb 2025}{Remote}{
+    \item Built 15-minute deployment pipeline via GitHub Actions, Docker, Cycle.io.
+    \item Deployed Keycloak for centralized auth; managed observability and resilience.
+    \item Delivered core backend services using NestJS for a real-time marketplace.
+  }
+  
+  \cvrole{Software Engineer}{May 2024--Sep 2024}{Remote}{
+    \item Created container-based CI pipelines and deployment flows with fast feedback cycles.
+    \item Drove service modularization and platform reliability improvements.
+  }
+}
+
+\cvcompany{Clipboard Health}{-- \textit{U.S.-based marketplace}}{
+  \cvrole{Senior Software Engineer}{Dec 2022--Nov 2023}{Remote}{
+    \item Migrated invoicing to event-driven microservices, reducing processing time from 2 days to 2 hours.
+    \item Led debugging of CDC performance issues and live-stream bottlenecks.
+    \item Instrumented and iterated k6 load testing to optimize delivery workflows.
+  }
+  
+  \cvrole{Software Development Engineer}{Nov 2021--Feb 2023}{Remote}{
+    \item Extracted React front-end from monolith into standalone repo. With 0 downtime for over 100 collaborators.
+    \item Refactored low-code invoicing logic into maintainable services.
+  }
+}
+
+\cvcompany{Jijo}{-- \textit{U.S.-based startup}}{
+  \cvrole{Software Engineer}{2021}{Remote}{
+    \item Developed Stripe payments, class booking UI, and conference integration using Chime SDK.
+    \item Delivered complete feature flows in weekly iterations with autonomy.
+  }
+}
+
+\cvcompany{National Computing Center}{Asunción, Paraguay}{
+  \cvrole{Full Stack Software Engineer}{2018--2020}{In-Office}{
+    \item Built React-based personnel tracking platform for 500+ users.
+    \item Fully owned feature delivery and compliance workflows.
+  }
+}
+
+\cvcompany{Trivellini Tech}{Asunción, Paraguay}{
+  \cvrole{Software Engineer}{2017--2018}{In-Office}{
+    \item Built real-time Qt/C++ UI for surgical device monitors with responsive protocol layer.
+    \item Worked closely with hardware teams on cross-functional integration.
+  }
+}
+
+\cvcompany{Freelance}{Asunción, Paraguay}{
+  \cvrole{Full Stack Developer}{2014--2017}{Remote}{
+    \item Created Electron/React Shopify label generator.
+    \item Delivered backend services, UIs, and integrations using Django and AngularJS.
+  }
+}
+
+% Education
+\section{Education}
+
+\cveducation{National University of Asunción}{Software Engineering}{2009--2013}{Completed core CS curriculum (excluding advanced mathematics). Focus on software development, algorithms, and backend systems.}
+
+% Core Technical Skills
+\section{Core Technical Skills}
+
+\textbf{Languages \& Frameworks:} TypeScript, JavaScript, React/Next.js, Node.js, NestJS, C++/Qt\\[0.4em]
+\textbf{Systems \& Infra:} Docker, AWS (ECS, RDS, SQS, EventBridge), Terraform\\[0.4em]
+\textbf{Testing \& CI:} GitHub Actions, k6, CDC pipelines, end-to-end automation\\[0.4em]
+\textbf{Databases:} PostgreSQL, Aurora RDS, CouchDB\\[0.4em]
+\textbf{Monitoring:} Datadog, custom logging, runtime metrics\\[0.4em]
+\textbf{Payments:} Stripe integrations, event-based pricing logic
+
+% Strengths & Work Philosophy
+\section{Strengths \& Work Philosophy}
+
+\begin{itemize}
+  \item Biased toward action: quick iteration cycles and small wins that compound
+  \item Deep focus on fast feedback loops and system observability
+  \item Comfortable owning CI/CD and system plumbing work others avoid
+  \item Thrive when collaborating with thoughtful PMs and clear goals
+  \item Struggle with premature planning, vague deliverables, or performative coordination
+  \item Seek ownership over implementation, not politics or layers of indirection
+\end{itemize}
+
+\end{document}
