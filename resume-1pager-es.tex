@@ -1,0 +1,164 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[margin=0.4in]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{fontspec}
+\usepackage{tabularx}
+\usepackage{array}
+
+% ========== FONT SELECTION ==========
+% Default SERIF FONTS (Classic, traditional look)
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+
+% SANS-SERIF FONTS (Modern, clean look)
+% \renewcommand{\familydefault}{\sfdefault}
+
+% Configure hyperlinks
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+    pdftitle={Galileo Sanchez - Currículum},
+    pdfauthor={Galileo Sanchez}
+}
+
+% Define colors
+\definecolor{darkgray}{gray}{0.2}
+\definecolor{mediumgray}{gray}{0.5}
+\definecolor{lightgray}{gray}{0.8}
+\definecolor{actioncolor}{RGB}{44, 62, 80}
+
+% Remove page numbers
+\pagestyle{empty}
+
+% Custom section formatting
+\titleformat{\section}
+  {\normalsize\bfseries\color{darkgray}}
+  {}
+  {0em}
+  {}[\vspace{-0.5em}\textcolor{lightgray}{\titlerule[0.5pt]}]
+
+\titleformat{\subsection}
+  {\small\bfseries}
+  {}
+  {0em}
+  {}
+
+% Reduce spacing
+\titlespacing*{\section}{0pt}{0.5em}{0.2em}
+\titlespacing*{\subsection}{1em}{0.3em}{0.1em}
+
+% Custom list formatting
+\setlist[itemize]{leftmargin=0.8em, topsep=0pt, itemsep=0pt, parsep=0pt}
+
+% Define a more prominent bold command for action verbs
+\newcommand{\actionverb}[1]{\textcolor{actioncolor}{\textbf{#1}}}
+
+% Custom commands
+\newcommand{\cvheader}[5]{
+  \begin{center}
+    {\Large \textbf{#1}}\\[0.1em]
+    {\normalsize \textcolor{darkgray}{#2}}\\[0.3em]
+    
+    \footnotesize \textcolor{mediumgray}{#3}\\[0.2em]
+    
+    \footnotesize
+    \href{mailto:#4}{#4} $\bullet$ \href{https://#5}{#5} $\bullet$ 
+    \href{https://github.com/galileopy}{github.com/galileopy} $\bullet$ 
+    \href{https://www.linkedin.com/in/galileopy}{linkedin.com/in/galileopy}
+  \end{center}
+  \vspace{0.3em}
+}
+
+\newcommand{\cvcompany}[3]{
+  \subsection{#1 \textcolor{mediumgray}{#2} \textcolor{mediumgray}{\footnotesize -- Remoto}}
+  #3
+}
+
+\newcommand{\cvrole}[3]{
+  \subsection{#1 \hfill {\footnotesize\textcolor{mediumgray}{#2}}}
+  {\footnotesize #3}
+  \vspace{0.2em}
+}
+
+\newcommand{\cvsinglecompany}[5]{
+  \subsection{#1 \textcolor{mediumgray}{#2} -- \textbf{\small #3} \hfill {\footnotesize\textcolor{mediumgray}{#4}}}
+  {\footnotesize #5}
+  \vspace{0.2em}
+}
+
+\newcommand{\cveducation}[4]{
+  \subsection{#1, \textbf{\small #2} \hfill {\footnotesize\textcolor{mediumgray}{#3}}}
+  {\footnotesize #4}
+}
+
+\begin{document}
+
+% Header
+\cvheader{Galileo Sanchez}{Desarrollador Backend}{Remoto, desde Asunción, Paraguay}{galileo@galileopy.com.py}{cv.galileopy.com.py}
+
+% About/Summary
+\section{Acerca de}
+{\footnotesize Desarrollador Backend con 10+ años de experiencia construyendo sistemas backend, pipelines CI/CD, y optimización de rendimiento. Redujo el tiempo de procesamiento de facturas de 2 días a 2 horas en Clipboard Health. Construyó pipelines CI/CD con despliegues de 10 minutos. Convirtió sistemas legacy en microservicios. Funciona mejor con objetivos claros y ciclos de retroalimentación rápidos.}
+
+\section{Fortalezas Principales}
+{\footnotesize
+	\textbf{Optimización de Rendimiento}: Entregó tiempos de carga de reportes sub-500ms reescribiendo pipeline ETL de impresiones de anuncios con dificultades manejando más de 1M solicitudes/día usando pruebas de carga K6 y almacenamiento orientado a eventos ClickHouse $\bullet$ \textbf{CI/CD y DevOps}: Empoderó a equipo de 5 desarrolladores para lograr lanzamientos diarios construyendo pipelines CI/CD con Docker y GitHub Actions, incorporando pruebas automatizadas Jest $\bullet$ \textbf{Refactorización de Sistemas}: Minimizó dependencias de mantenimiento refactorizando código legacy en subsistemas independientes usando scripts personalizados Git filter-branch, llevando a incorporación fluida para 100+ ingenieros $\bullet$ \textbf{Colaboración Interfuncional}: Facilitó a gerentes de producto y 3-5 desarrolladores minimizar ida y vuelta de diseño a través de escucha atenta, toma de notas, y preguntas clarificadoras
+}
+
+% Technical Skills
+\section{Habilidades Técnicas}
+{\footnotesize
+	\textbf{Rendimiento y Pruebas:} Pruebas de Carga K6, Depuración de Sistemas, Análisis de Cuellos de Botella $\bullet$ \textbf{Backend:} TypeScript, Node.js, NestJS, Arquitectura Orientada a Eventos, Microservicios $\bullet$ \textbf{DevOps:} Docker, GitHub Actions, Terraform, AWS ECS, Pipelines CI/CD $\bullet$ \textbf{Bases de Datos:} PostgreSQL, ClickHouse, Aurora RDS $\bullet$ \textbf{Frontend:} React, Next.js, Qt/C++ $\bullet$ \textbf{Nube:} AWS, SQS/EventBridge, Datadog $\bullet$ \textbf{Integración:} Stripe, Keycloak, Sistemas en Tiempo Real
+}
+
+% Work Experience
+\section{Experiencia Laboral}
+
+\cvcompany{Glui}{-- \textit{Startup global con sede en EE.UU.}}{
+  \cvrole{Tecnólogo Líder}{Feb 2025--Presente}{
+$\bullet$ \actionverb{Logró} validación de capacidad de 80M solicitudes/día supervisando sistema de captura de eventos y plan de pruebas de carga usando K6 $\bullet$ \actionverb{Disminuyó} tiempo de revisión de casos de prueba de horas a minutos creando SDK auxiliar de pruebas usando TypeScript, Superagent, y Jest
+  }
+  
+  \cvrole{Ingeniero Backend Líder}{Oct 2024--Feb 2025}{
+$\bullet$ \actionverb{Permitió} a desarrolladores frontend trabajar a ritmo predecible creando microservicios NestJS para gestión de campañas usando Docker y JSON-API v1 $\bullet$ \actionverb{Ayudó} a más de 10 usuarios internos acceder a sistemas seguros configurando autenticación Keycloak con RBAC NestJS
+  }
+  
+  \cvrole{Ingeniero de Software}{May 2024--Sep 2024}{
+$\bullet$ \actionverb{Empoderó} a equipo de 5 desarrolladores para desplegar en 10 minutos construyendo pipelines CI/CD con GitHub Actions, Docker, y Cycle.io, incorporando pruebas de integración Jest
+  }
+}
+
+\cvcompany{Clipboard Health}{-- \textit{Startup global con sede en EE.UU.}}{
+  \cvrole{Ingeniero de Software Senior}{Dic 2022--Nov 2023}{
+$\bullet$ \actionverb{Redujo} errores de notificaciones no entregadas implementando mecanismos de reintento y manejadores asíncronos usando trazas Datadog, beneficiando a 50K+ trabajadores de salud $\bullet$ \actionverb{Logró} manejo de carga a nivel de producción (2000+ req/min) implementando marcos de monitoreo de rendimiento K6
+  }
+  
+  \cvrole{Ingeniero de Desarrollo de Software}{Nov 2021--Feb 2023}{
+$\bullet$ \actionverb{Realizó} separación sin tiempo de inactividad del frontend de aplicación monolítica a repositorio React usando scripts personalizados Git filter-branch, beneficiando a 100+ colaboradores $\bullet$ \actionverb{Optimizó} tiempo de procesamiento de facturas de 2 días a 2 horas refactorizando a mecanismos de reintento orientados a eventos, llevando a entrega a tiempo para equipo de finanzas y clientes
+  }
+}
+
+\cvsinglecompany{Jijo}{-- \textit{Startup global con sede en EE.UU.}}{Ingeniero de Software}{2021}{
+$\bullet$ \actionverb{Facilitó} a usuarios del lado de la oferta recolectar pagos confiables construyendo integración Stripe con interfaz de reservas y gestión de estado Redux $\bullet$ \actionverb{Minimizó} costos de videollamadas mientras mejoraba calidad migrando de Chime a Agora SDK usando React, hooks personalizados, y proveedores de sesión
+}
+
+\cvsinglecompany{Centro Nacional de Computación}{-- \textit{Presencial, Asunción, Paraguay}}{Ingeniero de Software Full Stack}{2018--2020}{
+$\bullet$ \actionverb{Disminuyó} tiempo administrativo construyendo plataforma React para entrada/salida y solicitudes de permisos usando Node.js, Express, y PostgreSQL, eliminando 10K+ solicitudes de PTO impresas/año para 2000+ empleados y equipo de RH
+}
+
+\cvsinglecompany{Trivellini Tech}{-- \textit{Presencial, Asunción, Paraguay}}{Ingeniero de Software}{2017--2018}{
+$\bullet$ \actionverb{Logró} capacidad de respuesta de UI en tiempo real para métricas de dispositivos quirúrgicos construyendo frontend C++/Qt con Qt Signals, integrado con Raspbian en Raspberry Pi
+}
+
+\cvsinglecompany{Freelancer}{-- \textit{Remoto}}{Ingeniero Full Stack}{2014--2017}{
+$\bullet$ \actionverb{Permitió} a clientes de e-commerce procesar etiquetas con vistas previas 3D creando aplicación Electron/React Shopify integrada con Three.js para renderizado STL
+}
+
+\section{Educación}
+\cveducation{Universidad Nacional de Asunción}{Ingeniería de Software}{2009--2013}{Completó currículo de CS enfocándose en desarrollo de software, algoritmos, y sistemas de bases de datos. Apoyó colaboración interdisciplinaria con estudiantes de ingeniería eléctrica y electrónica para construir backend de robot seguidor de línea usando visión por computadora en sistema montado en Android.}
+
+\end{document}

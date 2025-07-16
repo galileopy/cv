@@ -1,0 +1,169 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[margin=0.4in]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{fontspec}
+\usepackage{tabularx}
+\usepackage{array}
+
+% ========== FONT SELECTION ==========
+% Default SERIF FONTS (Classic, traditional look)
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+
+% SANS-SERIF FONTS (Modern, clean look)
+% \renewcommand{\familydefault}{\sfdefault}
+
+% Configure hyperlinks
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+    pdftitle={Galileo Sanchez - Resume},
+    pdfauthor={Galileo Sanchez}
+}
+
+% Define colors
+\definecolor{darkgray}{gray}{0.2}
+\definecolor{mediumgray}{gray}{0.5}
+\definecolor{lightgray}{gray}{0.8}
+\definecolor{actioncolor}{RGB}{44, 62, 80}
+
+% Remove page numbers
+\pagestyle{empty}
+
+% Custom section formatting
+\titleformat{\section}
+  {\normalsize\bfseries\color{darkgray}}
+  {}
+  {0em}
+  {}[\vspace{-0.5em}\textcolor{lightgray}{\titlerule[0.5pt]}]
+
+\titleformat{\subsection}
+  {\small\bfseries}
+  {}
+  {0em}
+  {}
+
+% Reduce spacing
+\titlespacing*{\section}{0pt}{0.5em}{0.2em}
+\titlespacing*{\subsection}{1em}{0.3em}{0.1em}
+
+% Custom list formatting
+\setlist[itemize]{leftmargin=0.8em, topsep=0pt, itemsep=0pt, parsep=0pt}
+
+% Define a more prominent bold command for action verbs
+\newcommand{\actionverb}[1]{\textcolor{actioncolor}{\textbf{#1}}}
+
+% Custom commands
+\newcommand{\cvheader}[5]{
+  \begin{center}
+    {\Large \textbf{#1}}\\[0.1em]
+    {\normalsize \textcolor{darkgray}{#2}}\\[0.3em]
+    
+    \footnotesize \textcolor{mediumgray}{#3}\\[0.2em]
+    
+    \footnotesize
+    \href{mailto:#4}{#4} $\bullet$ \href{https://#5}{#5} $\bullet$ 
+    \href{https://github.com/galileopy}{github.com/galileopy} $\bullet$ 
+    \href{https://www.linkedin.com/in/galileopy}{linkedin.com/in/galileopy}
+  \end{center}
+  \vspace{0.3em}
+}
+
+\newcommand{\cvcompany}[3]{
+  \subsection{#1 \textcolor{mediumgray}{#2} \textcolor{mediumgray}{\footnotesize -- Remote}}
+  #3
+}
+
+\newcommand{\cvrole}[3]{
+  \subsection{#1 \hfill {\footnotesize\textcolor{mediumgray}{#2}}}
+  {\footnotesize #3}
+  \vspace{0.2em}
+}
+
+\newcommand{\cvsinglecompany}[5]{
+  \subsection{#1 \textcolor{mediumgray}{#2} -- \textbf{\small #3} \hfill {\footnotesize\textcolor{mediumgray}{#4}}}
+  {\footnotesize #5}
+  \vspace{0.2em}
+}
+
+\newcommand{\cveducation}[4]{
+  \subsection{#1, \textbf{\small #2} \hfill {\footnotesize\textcolor{mediumgray}{#3}}}
+  {\footnotesize #4}
+}
+
+\begin{document}
+
+% Header
+\cvheader{Galileo Sanchez}{Lead Backend Engineer}{Remote, from Asunción, Paraguay}{galileo@galileopy.com.py}{cv.galileopy.com.py}
+
+% About/Summary
+\section{About}
+{\footnotesize Lead Backend Engineer with 10+ years of experience building backend systems, CI/CD pipelines, and performance optimization. Reduced invoice processing time from 2 days to 2 hours at Clipboard Health. Built CI/CD pipelines with 10-minute deployments. Converted legacy systems into microservices. Works best with clear goals and fast feedback loops.}
+
+\section{Core Strengths}
+{\footnotesize
+	\textbf{Performance Optimization}: Delivered sub-500ms report loading times by rewriting struggling ad-impression ETL pipeline handling over 1M requests/day using K6 load testing and ClickHouse event-driven storage $\bullet$ \textbf{CI/CD \& DevOps}: Empowered team of 5 developers to achieve daily releases by building CI/CD pipelines with Docker and GitHub Actions, incorporating Jest automated testing $\bullet$ \textbf{System Refactoring}: Minimized maintenance dependencies by refactoring legacy code into independent subsystems using custom Git filter-branch scripts, leading to seamless onboarding for 100+ engineers $\bullet$ \textbf{Cross-functional Collaboration}: Facilitated product managers and 3-5 developers to minimize design back-and-forth through attentive listening, note-taking, and clarifying questions
+}
+
+% Technical Skills
+\section{Technical Skills}
+{\footnotesize
+	\textbf{Performance \& Testing:} K6 Load Testing, System Debugging, Bottleneck Analysis $\bullet$ \textbf{Backend:} TypeScript, Node.js, NestJS, Event-Driven Architecture, Microservices $\bullet$ \textbf{DevOps:} Docker, GitHub Actions, Terraform, AWS ECS, CI/CD Pipelines $\bullet$ \textbf{Databases:} PostgreSQL, ClickHouse, Aurora RDS $\bullet$ \textbf{Frontend:} React, Next.js, Qt/C++ $\bullet$ \textbf{Cloud:} AWS, SQS/EventBridge, Datadog $\bullet$ \textbf{Integration:} Stripe, Keycloak, Real-time Systems
+}
+
+% Work Experience
+\section{Work Experience}
+
+\cvcompany{Glui}{-- \textit{U.S.-based global startup}}{
+  \cvrole{Lead Technologist}{Feb 2025--Present}{
+$\bullet$ \actionverb{Attained} 80M requests/day capacity validation by overseeing event capturing system and load test plan using K6 $\bullet$ \actionverb{Decreased} test case review time from hours to minutes by creating Test helper SDK using TypeScript, Superagent, and Jest
+  }
+  
+  \cvrole{Lead Backend Engineer}{Oct 2024--Feb 2025}{
+$\bullet$ \actionverb{Allowed} frontend developers to work at predictable rate by creating NestJS microservices for campaign management using Docker and JSON-API v1 $\bullet$ \actionverb{Helped} over 10 internal users access secure systems by setting up Keycloak authentication with NestJS RBAC
+  }
+  
+  \cvrole{Software Engineer}{May 2024--Sep 2024}{
+$\bullet$ \actionverb{Empowered} team of 5 developers to deploy in 10 minutes by building CI/CD pipelines with GitHub Actions, Docker, and Cycle.io, incorporating Jest integration tests
+  }
+}
+
+\cvcompany{Clipboard Health}{-- \textit{U.S.-based global startup}}{
+  \cvrole{Senior Software Engineer}{Dec 2022--Nov 2023}{
+$\bullet$ \actionverb{Lowered} undelivered notification errors by implementing retry mechanisms and async handlers using Datadog traces, benefiting 50K+ healthcare workers $\bullet$ \actionverb{Accomplished} production-level load handling (2000+ reqs/min) by implementing K6 performance monitoring
+  }
+  
+  \cvrole{Software Development Engineer}{Nov 2021--Feb 2023}{
+$\bullet$ \actionverb{Realized} zero-downtime separation of frontend from monolithic app into React repository using custom Git filter-branch scripts, benefiting 100+ collaborators $\bullet$ \actionverb{Optimized} invoice processing time from 2 days to 2 hours by refactoring to event-driven retry mechanisms, leading to on-time delivery for finance team and clients
+  }
+}
+
+\cvsinglecompany{Jijo}{-- \textit{U.S.-based global startup}}{Software Engineer}{2021}{
+$\bullet$ \actionverb{Facilitated} supply-side users to collect reliable payments by building Stripe integration with booking interface and Redux state management $\bullet$ \actionverb{Minimized} video call costs while improving quality by migrating from Chime to Agora SDK using React, custom hooks, and session providers
+}
+
+\cvsinglecompany{National Computing Center}{-- \textit{On-site, Asunción, Paraguay}}{Full Stack Software Engineer}{2018--2020}{
+$\bullet$ \actionverb{Decreased} administrative time by building React platform for clock-in/out and leave requests using Node.js, Express, and PostgreSQL, eliminating 10K+ printed PTO requests/year for 2000+ employees and HR team
+}
+
+\cvsinglecompany{Trivellini Tech}{-- \textit{On-site, Asunción, Paraguay}}{Software Engineer}{2017--2018}{
+$\bullet$ \actionverb{Accomplished} real-time UI responsiveness for surgical device metrics by building C++/Qt frontend with Qt Signals, integrated with Raspbian on Raspberry Pi
+}
+
+\cvsinglecompany{Freelancer}{-- \textit{Remote}}{Full Stack Engineer}{2014--2017}{
+$\bullet$ \actionverb{Allowed} e-commerce clients to process labels with 3D previews by creating Electron/React Shopify app integrated with Three.js for STL rendering
+}
+
+% Education
+
+% Core Strengths
+
+
+\section{Education}
+\cveducation{National University of Asunción}{Software Engineering}{2009--2013}{Completed CS curricula focusing on software development, algorithms, and database systems. Supported interdisciplinary collaboration with electrical and electronics engineering students to build a line-follower bot backend using computer vision on an Android-mounted system.}
+
+\end{document}

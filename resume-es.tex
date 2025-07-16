@@ -1,0 +1,194 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{fontspec}
+\usepackage{tabularx}
+\usepackage{array}
+
+% Set main font - Classic serif font for professional appearance
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+% Use Roman (serif) as default - removes the \sfdefault which was making it sans-serif
+
+% Configure hyperlinks
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+    pdftitle={Galileo Sanchez - Currículum},
+    pdfauthor={Galileo Sanchez}
+}
+
+% Define colors
+\definecolor{darkgray}{gray}{0.2}
+\definecolor{mediumgray}{gray}{0.5}
+\definecolor{lightgray}{gray}{0.8}
+\definecolor{actioncolor}{RGB}{44, 62, 80}
+
+% Remove page numbers
+\pagestyle{empty}
+
+% Custom section formatting
+\titleformat{\section}
+  {\large\bfseries\color{darkgray}}
+  {}
+  {0em}
+  {}[\textcolor{lightgray}{\titlerule[0.8pt]}]
+
+\titleformat{\subsection}
+  {\normalsize\bfseries}
+  {}
+  {0em}
+  {}
+
+% Reduce spacing
+\titlespacing*{\section}{0pt}{1.5em}{0.8em}
+\titlespacing*{\subsection}{0pt}{1em}{0.5em}
+
+% Custom list formatting
+\setlist[itemize]{leftmargin=1.2em, topsep=0pt, itemsep=3pt, parsep=0pt}
+
+% Define a more prominent bold command for action verbs
+\newcommand{\actionverb}[1]{\textcolor{actioncolor}{\textbf{#1}}}
+
+% Custom commands
+\newcommand{\cvheader}[5]{
+  \begin{center}
+    {\Huge \textbf{#1}}\\[0.4em]
+    {\Large \textcolor{darkgray}{#2}}\\[1em]
+    
+    \textcolor{mediumgray}{#3}\\[0.6em]
+    
+    \begin{tabular}{c}
+      \href{mailto:#4}{#4} $\bullet$ \href{https://#5}{#5}\\[0.3em]
+      \href{https://github.com/galileopy}{github.com/galileopy} $\bullet$ 
+      \href{https://www.linkedin.com/in/galileopy}{linkedin.com/in/galileopy}
+    \end{tabular}
+  \end{center}
+  \vspace{1.2em}
+}
+
+\newcommand{\cvcompany}[3]{
+  \subsection{#1 \textcolor{mediumgray}{#2}}
+  #3
+  \vspace{0.5em}
+}
+
+\newcommand{\cvrole}[4]{
+  \textbf{#1} \hfill \textcolor{mediumgray}{\small #2}\\
+  \textit{#3}
+  \begin{itemize}
+    #4
+  \end{itemize}
+  \vspace{1em}
+}
+
+\newcommand{\cveducation}[4]{
+  \subsection{#1}
+  \textbf{#2} \hfill \textcolor{mediumgray}{\small #3}
+  \begin{itemize}
+    \item #4
+  \end{itemize}
+}
+
+\begin{document}
+
+% Header
+\cvheader{Galileo Sanchez}{Desarrollador Backend}{Remoto, desde Asunción, Paraguay}{galileo@galileopy.com.py}{cv.galileopy.com.py}
+
+% About/Summary
+\section{Acerca de}
+Desarrollador Backend con más de 10 años de experiencia especializado en automatización de CI/CD y ciclos de iteración rápida. Construyendo pipelines robustos de CI/CD con despliegues de 10 minutos, y refactorizando sistemas legacy hacia microservicios escalables. Prospera en entornos con objetivos claros, ciclos de retroalimentación rápidos, y resolución colaborativa de problemas.
+
+% Work Experience
+\section{Experiencia Laboral}
+
+\cvcompany{Glui}{-- \textit{Startup global con sede en EE.UU.}}{
+  \cvrole{Tecnólogo Líder}{Feb 2025--Presente}{Remoto, desde Asunción, Paraguay}{
+    \item \actionverb{Supervisé} sistema de captura de eventos y plan de pruebas de carga con K6 para validar capacidad de 80M solicitudes/día
+    \item \actionverb{Creé} SDK de ayuda para pruebas para acelerar el desarrollo de casos de prueba
+  }
+  
+  \cvrole{Ingeniero Backend Líder}{Oct 2024--Feb 2025}{Remoto, desde Asunción, Paraguay}{
+    \item \actionverb{Creé} microservicios con NestJS para sistema de gestión de campañas backend
+    \item \actionverb{Configuré} autenticación con Keycloak y servicio RBAC con NestJS
+  }
+  
+  \cvrole{Ingeniero de Software}{May 2024--Sep 2024}{Remoto, desde Asunción, Paraguay}{
+    \item \actionverb{Construí} pipeline CI/CD con GitHub Actions, Docker, y Cycle.io para despliegues de 10 minutos
+    \item \actionverb{Desarrollé} aplicaciones NestJS contenerizadas
+  }
+}
+
+\cvcompany{Clipboard Health}{-- \textit{Startup global con sede en EE.UU.}}{
+  \cvrole{Ingeniero de Software Senior}{Dic 2022--Nov 2023}{Remoto, desde Asunción, Paraguay}{
+    \item \actionverb{Reparé} sistema de notificaciones para actualizaciones de trabajadores en el sector salud y cuidado de ancianos
+    \item \actionverb{Implementé} frameworks de pruebas y monitoreo de rendimiento con K6
+  }
+  
+  \cvrole{Ingeniero de Desarrollo de Software}{Nov 2021--Feb 2023}{Remoto, desde Asunción, Paraguay}{
+    \item \actionverb{Separé} frontend de aplicación monolítica en repositorio React. Con 0 tiempo de perdido para más de 100 colaboradores
+    \item \actionverb{Reparé} errores del sistema de facturación en sistemas de back-office
+  }
+}
+
+\cvcompany{Jijo}{-- \textit{Startup global con sede en EE.UU.}}{
+  \cvrole{Ingeniero de Software}{2021}{Remoto, desde Asunción, Paraguay}{
+    \item \actionverb{Construí} integración de pagos con Stripe con interfaz de reservas y gestión de estado Redux
+    \item \actionverb{Creé} estudio de conferencias con Chime SDK para sesiones de entrenamiento en vivo
+  }
+}
+
+\cvcompany{Centro Nacional de Computación}{}{
+  \cvrole{Ingeniero de Software Full Stack}{2018--2020}{Remoto, desde Asunción, Paraguay}{
+    \item \actionverb{Construí} plataforma React para fichaje de empleados y solicitudes de permisos para más de 500 empleados
+    \item \actionverb{Gestioné} desarrollo completo desde inicio hasta despliegue
+  }
+}
+
+\cvcompany{Trivellini Tech}{}{
+  \cvrole{Ingeniero de Software}{2017--2018}{Remoto, desde Asunción, Paraguay}{
+    \item \actionverb{Desarrollé} frontend en tiempo real C++/Qt para dispositivos quirúrgicos usando Qt Signals para sistemas de monitoreo responsivos
+    \item \actionverb{Colaboré} directamente con ingenieros de hardware para optimizar capacidad de respuesta del dispositivo y establecer protocolos de comunicación claros
+    \item \actionverb{Prosperé} en entorno flexible y orientado a resultados con programación orgánica y resolución colaborativa de problemas
+  }
+}
+
+\cvcompany{Freelancer}{}{
+  \cvrole{Ingeniero Full Stack}{2014--2017}{Remoto, desde Asunción, Paraguay}{
+    \item \actionverb{Construí} sistema HR Angular/Django para planificación de carrera con requisitos claros del cliente y retroalimentación iterativa
+    \item \actionverb{Desarrollé} integración Electron/React con Shopify para procesamiento automatizado de etiquetas, resolviendo desafíos específicos del flujo de trabajo del cliente
+  }
+}
+
+% Education
+\section{Educación}
+
+\cveducation{Universidad Nacional de Asunción}{Ingeniería de Software}{2009--2013}{Completé currículum de Informática, excluyendo matemáticas avanzadas. Estudié desarrollo de software, algoritmos, y sistemas de bases de datos para soluciones robustas.}
+
+% Core Strengths
+\section{Fortalezas Principales}
+
+\begin{itemize}
+  \item \textbf{Optimización de Rendimiento y Depuración}: Experiencia en pruebas de carga K6, análisis de cuellos de botella, y depuración de sistemas en vivo
+  \item \textbf{Diseño de Pipelines CI/CD}: Construcción de sistemas de despliegue rápidos y confiables con Docker, GitHub Actions, y pruebas automatizadas
+  \item \textbf{Refactorización de Sistemas}: Transformación de bases de código legacy en arquitecturas componibles y mantenibles
+  \item \textbf{Prototipado Rápido}: Proactivo para resolución de problemas con ciclos de mejora iterativa
+  \item \textbf{Colaboración Interfuncional}: Trabajo efectivo con dueños de producto, PMs, y expertos del dominio para definir criterios de éxito claros
+\end{itemize}
+
+% Technical Skills
+\section{Habilidades Técnicas}
+
+\textbf{Rendimiento y Optimización:} Pruebas de Carga K6, Depuración de Sistemas, Análisis de Rendimiento, Identificación de Cuellos de Botella\\[0.4em]
+\textbf{Desarrollo Backend:} TypeScript, Node.js, NestJS, Arquitectura Orientada a Eventos, Microservicios\\[0.4em]
+\textbf{DevOps y CI/CD:} Docker, GitHub Actions, Terraform, AWS ECS, Optimización de Pipelines\\[0.4em]
+\textbf{Bases de Datos:} PostgreSQL, ClickHouse, Aurora RDS\\[0.4em]
+\textbf{Frontend:} React, Next.js, Qt/C++\\[0.4em]
+\textbf{Nube e Infraestructura:} AWS, SQS/EventBridge, Datadog\\[0.4em]
+\textbf{Integración:} Stripe, Keycloak
+
+\end{document}

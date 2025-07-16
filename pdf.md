@@ -9,16 +9,16 @@
 **X**: https://x.com/galileopy  
 **Location**: Remote, from Asunción, Paraguay
 
-**Summary**  
+## Summary
+
 Lead Backend Engineer with 10+ years of experience building backend systems, CI/CD pipelines, and performance optimization. Reduced invoice processing time from 2 days to 2 hours at Clipboard Health. Built CI/CD pipelines with 10-minute deployments. Converted legacy systems into microservices. Works best with clear goals and fast feedback loops.
 
 ## Core Strengths
 
-- **Performance Optimization**: Load testing with K6, debugging live systems, finding bottlenecks
-- **CI/CD Pipelines**: Building deployment systems with Docker, GitHub Actions, automated testing
-- **System Refactoring**: Converting legacy code into clean, maintainable systems
-- **Problem Solving**: Iterative approach to fixing issues with fast testing cycles
-- **Team Collaboration**: Working with product owners and stakeholders to define project goals
+- Delivered sub-500ms report loading times by rewriting a struggling ad-impression ETL pipeline handling over 1M requests/day using K6 load testing and ClickHouse event-driven storage.
+- Empowered a team of 5 developers to achieve daily releases by building CI/CD pipelines with Docker and GitHub Actions, incorporating Jest automated testing.
+- Minimized maintenance dependencies by refactoring legacy code into independent subsystems using custom Git filter-branch scripts, leading to seamless onboarding for 100+ engineers.
+- Facilitated product managers and 3-5 developers to minimize design back-and-forth by conducting collaboration through attentive listening, note-taking, and clarifying questions.
 
 ## Education
 
@@ -26,65 +26,50 @@ Lead Backend Engineer with 10+ years of experience building backend systems, CI/
 **Software Engineering** (Completed CS-related curricula, excluding advanced mathematics)  
 2009 - 2013
 
-- Studied software development, algorithms, and database systems for robust backend solutions.
+- Supported interdisciplinary collaboration with electrical and electronics engineering students to build a line-follower bot backend using computer vision on an Android-mounted system.
 
 ## Work Experience
 
 **Glui** (U.S.-based global startup)  
-**Lead Technologist** (Feb 2025 - Present) - Remote, from Asunción, Paraguay
+**Lead Technologist / Lead Backend Engineer / Software Engineer** (May 2024 - Present) - Remote, from Asunción, Paraguay
 
-- **Oversaw** Event capturing system and load test plan with K6 to validate 80M requests/day capacity
-- **Created** Test helper SDK to speed up test case development
-
-**Lead Backend Engineer** (Oct 2024 - Feb 2025) - Remote, from Asunción, Paraguay
-
-- **Created** NestJS microservices for backend campaign management system
-- **Set up** Keycloak authentication with NestJS RBAC service
-
-**Software Engineer** (May 2024 - Sep 2024) - Remote, from Asunción, Paraguay
-
-- **Built** CI/CD pipeline with GitHub Actions, Docker, and Cycle.io for 10-minute deployments
-- **Developed** containerized NestJS applications
+- Attained 80M requests/day capacity validation by overseeing event capturing system and load test plan using K6.
+- Decreased test case review time from hours to minutes by creating a Test helper SDK using TypeScript, Superagent, and Jest.
+- Allowed frontend developers to work at a predictable rate by creating NestJS microservices for campaign management using Docker and JSON-API v1.
+- Helped over 10 internal users to access secure systems by setting up Keycloak authentication with NestJS RBAC using Docker containers.
+- Empowered a team of 5 developers to deploy in 10 minutes by building CI/CD pipelines with GitHub Actions, Docker, and Cycle.io, incorporating Jest integration tests.
 
 **Clipboard Health** (U.S.-based global startup)  
-**Senior Software Engineer** (Dec 2022 - Nov 2023) - Remote, from Asunción, Paraguay
+**Senior Software Engineer / Software Development Engineer** (Nov 2021 - Nov 2023) - Remote, from Asunción, Paraguay
 
-- **Fixed** notification system for healthcare worker updates
-- **Implemented** testing frameworks and performance monitoring with K6
-- **Led** debugging of CDC performance issues and live-stream bottlenecks.
-
-**Software Development Engineer** (Nov 2021 - Feb 2023) - Remote, from Asunción, Paraguay
-
-- **Separated** frontend from monolithic app into React repository. With 0 downtime for over 100 collaborators
-- **Fixed** invoicing system bugs in backoffice systems
-
+- Lowered undelivered notification errors by implementing retry mechanisms and async handlers using Datadog traces, benefiting 50K+ healthcare workers.
+- Accomplished production-level load handling (2000+ reqs/min) by implementing K6 performance monitoring and testing frameworks.
+- Cut CDC latency issues by leading debugging with EventBridge, Mongo Atlas, and Datadog, leading to decreased demand-side churn in a 2-sided marketplace.
+- Realized zero-downtime separation of frontend from monolithic app into React repository using custom Git filter-branch scripts, benefiting 100+ collaborators.
+- Optimized invoice processing time from 2 days to 2 hours by refactoring to event-driven retry mechanisms, leading to on-time delivery for finance team and clients.
 
 **Jijo** (U.S.-based global startup)  
 **Software Engineer** (2021) - Remote, from Asunción, Paraguay
 
-- **Built** Stripe payment integration with booking interface and Redux state management
-- **Created** Chime SDK conference studio for live training sessions
+- Facilitated supply-side users to collect reliable payments by building Stripe integration with booking interface and Redux state management.
+- Minimized video call costs while improving quality by migrating from Chime to Agora SDK using React, custom hooks, and session providers.
 
 **National Computing Center**  
 **Full Stack Software Engineer** (2018 - 2020) - Remote, from Asunción, Paraguay
 
-- **Built** React platform for employee clock-in/out and leave requests for 500+ employees
-- **Managed** complete development from start to deployment
+- Decreased administrative time by building a React platform for clock-in/out and leave requests using Node.js, Express, and PostgreSQL, eliminating 10K+ printed PTO requests/year for 2000+ employees and HR team.
+- Delivered on-time completion of full development lifecycle by managing from start to deployment under technical director oversight.
 
 **Trivellini Tech**  
 **Software Engineer** (2017 - 2018) - Remote, from Asunción, Paraguay
 
-- **Built** C++/Qt frontend for surgical devices with real-time monitoring using Qt Signals
-- **Worked** with hardware engineers to optimize device response times
-- **Collaborated** in flexible environment with results-based scheduling
+- Accomplished real-time UI responsiveness for surgical device metrics by building C++/Qt frontend with Qt Signals, integrated with Raspbian on Raspberry Pi.
+- Supported surgeons and a team of 3 engineers to optimize device response times by collaborating in a results-based flexible environment.
 
 **Freelancer**  
 **Full Stack Engineer** (2014 - 2017) - Remote, from Asunción, Paraguay
 
-- **Built** Angular/Django HR system for career planning
-- **Created** Electron/React Shopify app for automated label processing
-
-## Technical Skills
+- Allowed e-commerce clients to process labels with 3D previews by creating Electron/React Shopify app integrated with Three.js for STL rendering.
 
 ## Technical Skills
 

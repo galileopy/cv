@@ -101,94 +101,93 @@
 
 % About/Summary
 \section{About}
-Lead Backend Engineer with 10+ years of experience specializing in CI/CD automation, and rapid iteration cycles. Building robust CI/CD pipelines with 10-minute deployments, and refactoring legacy systems into scalable microservices. Thrives in environments with clear goals, fast feedback loops, and collaborative problem-solving.
+Lead Backend Engineer with 10+ years of experience building backend systems, CI/CD pipelines, and performance optimization. Reduced invoice processing time from 2 days to 2 hours at Clipboard Health. Built CI/CD pipelines with 10-minute deployments. Converted legacy systems into microservices. Works best with clear goals and fast feedback loops.
+
+% Core Strengths
+\section{Core Strengths}
+
+\begin{itemize}
+	\item \textbf{Performance Optimization \& Debugging}: Delivered sub-500ms report loading times by rewriting struggling ad-impression ETL pipeline handling over 1M requests/day using K6 load testing and ClickHouse event-driven storage
+	\item \textbf{CI/CD Pipeline Design}: Empowered team of 5 developers to achieve daily releases by building CI/CD pipelines with Docker and GitHub Actions, incorporating Jest automated testing
+	\item \textbf{System Refactoring}: Minimized maintenance dependencies by refactoring legacy code into independent subsystems using custom Git filter-branch scripts, leading to seamless onboarding for 100+ engineers
+	\item \textbf{Cross-functional Collaboration}: Facilitated product managers and 3-5 developers to minimize design back-and-forth through attentive listening, note-taking, and clarifying questions
+\end{itemize}
+
+% Technical Skills
+\section{Technical Skills}
+
+\textbf{Performance \& Testing:} K6 Load Testing, System Debugging, Bottleneck Analysis\\[0.4em]
+\textbf{Backend:} TypeScript, Node.js, NestJS, Event-Driven Architecture, Microservices\\[0.4em]
+\textbf{DevOps:} Docker, GitHub Actions, Terraform, AWS ECS, CI/CD Pipelines\\[0.4em]
+\textbf{Databases:} PostgreSQL, ClickHouse, Aurora RDS\\[0.4em]
+\textbf{Frontend:} React, Next.js, Qt/C++\\[0.4em]
+\textbf{Cloud:} AWS, SQS/EventBridge, Datadog\\[0.4em]
+\textbf{Integration:} Stripe, Keycloak, Real-time Systems
+
 
 % Work Experience
 \section{Work Experience}
 
 \cvcompany{Glui}{-- \textit{U.S.-based global startup}}{
   \cvrole{Lead Technologist}{Feb 2025--Present}{Remote, from Asunción, Paraguay}{
-    \item \actionverb{Oversaw} Event capturing system and load test plan with K6 to validate 80M requests/day capacity
-    \item \actionverb{Created} Test helper SDK to speed up test case development
+    \item \actionverb{Attained} 80M requests/day capacity validation by overseeing event capturing system and load test plan using K6
+    \item \actionverb{Decreased} test case review time from hours to minutes by creating Test helper SDK using TypeScript, Superagent, and Jest
   }
   
   \cvrole{Lead Backend Engineer}{Oct 2024--Feb 2025}{Remote, from Asunción, Paraguay}{
-    \item \actionverb{Created} NestJS microservices for backend campaign management system
-    \item \actionverb{Set up} Keycloak authentication with NestJS RBAC service
+    \item \actionverb{Allowed} frontend developers to work at predictable rate by creating NestJS microservices for campaign management using Docker and JSON-API v1
+    \item \actionverb{Helped} over 10 internal users access secure systems by setting up Keycloak authentication with NestJS RBAC using Docker containers
   }
   
   \cvrole{Software Engineer}{May 2024--Sep 2024}{Remote, from Asunción, Paraguay}{
-    \item \actionverb{Built} CI/CD pipeline with GitHub Actions, Docker, and Cycle.io for 10-minute deployments
-    \item \actionverb{Developed} containerized NestJS applications
+    \item \actionverb{Empowered} team of 5 developers to deploy in 10 minutes by building CI/CD pipelines with GitHub Actions, Docker, and Cycle.io, incorporating Jest integration tests
   }
 }
 
 \cvcompany{Clipboard Health}{-- \textit{U.S.-based global startup}}{
   \cvrole{Senior Software Engineer}{Dec 2022--Nov 2023}{Remote, from Asunción, Paraguay}{
-    \item \actionverb{Fixed} notification system for healthcare worker updates
-    \item \actionverb{Implemented} testing frameworks and performance monitoring with K6
+    \item \actionverb{Lowered} undelivered notification errors by implementing retry mechanisms and async handlers using Datadog traces, benefiting 50K+ healthcare workers
+    \item \actionverb{Accomplished} production-level load handling (2000+ reqs/min) by implementing K6 performance monitoring and testing frameworks
+    \item \actionverb{Cut} CDC latency issues by leading debugging with EventBridge, Mongo Atlas, and Datadog, leading to decreased demand-side churn in a 2-sided marketplace
   }
   
   \cvrole{Software Development Engineer}{Nov 2021--Feb 2023}{Remote, from Asunción, Paraguay}{
-    \item \actionverb{Separated} frontend from monolithic app into React repository. With 0 downtime for over 100 collaborators
-    \item \actionverb{Fixed} invoicing system bugs in backoffice systems
+    \item \actionverb{Realized} zero-downtime separation of frontend from monolithic app into React repository using custom Git filter-branch scripts, benefiting 100+ collaborators
+    \item \actionverb{Optimized} invoice processing time from 2 days to 2 hours by refactoring to event-driven retry mechanisms, leading to on-time delivery for finance team and clients
   }
 }
 
 \cvcompany{Jijo}{-- \textit{U.S.-based global startup}}{
   \cvrole{Software Engineer}{2021}{Remote, from Asunción, Paraguay}{
-    \item \actionverb{Built} Stripe payment integration with booking interface and Redux state management
-    \item \actionverb{Created} Chime SDK conference studio for live training sessions
+    \item \actionverb{Facilitated} supply-side users to collect reliable payments by building Stripe integration with booking interface and Redux state management
+    \item \actionverb{Minimized} video call costs while improving quality by migrating from Chime to Agora SDK using React, custom hooks, and session providers
   }
 }
 
 \cvcompany{National Computing Center}{}{
   \cvrole{Full Stack Software Engineer}{2018--2020}{Remote, from Asunción, Paraguay}{
-    \item \actionverb{Built} React platform for employee clock-in/out and leave requests for 500+ employees
-    \item \actionverb{Managed} complete development from start to deployment
+    \item \actionverb{Decreased} administrative time by building React platform for clock-in/out and leave requests using Node.js, Express, and PostgreSQL, eliminating 10K+ printed PTO requests/year for 2000+ employees and HR team
+    \item \actionverb{Delivered} on-time completion of full development lifecycle by managing from start to deployment under technical director oversight
   }
 }
 
 \cvcompany{Trivellini Tech}{}{
   \cvrole{Software Engineer}{2017--2018}{Remote, from Asunción, Paraguay}{
-    \item \actionverb{Developed} real-time C++/Qt frontend for surgical devices using Qt Signals for responsive monitoring systems
-    \item \actionverb{Collaborated} directly with hardware engineers to optimize device responsiveness and establish clear communication protocols
-    \item \actionverb{Thrived} in flexible, results-oriented environment with organic scheduling and collaborative problem-solving
+    \item \actionverb{Accomplished} real-time UI responsiveness for surgical device metrics by building C++/Qt frontend with Qt Signals, integrated with Raspbian on Raspberry Pi
+    \item \actionverb{Supported} surgeons and team of 3 engineers to optimize device response times by collaborating in results-based flexible environment
   }
 }
 
 \cvcompany{Freelancer}{}{
   \cvrole{Full Stack Engineer}{2014--2017}{Remote, from Asunción, Paraguay}{
-    \item \actionverb{Built} Angular/Django HR system for career planning with clear client requirements and iterative feedback
-    \item \actionverb{Developed} Electron/React Shopify integration for automated label processing, solving specific client workflow challenges
+    \item \actionverb{Allowed} e-commerce clients to process labels with 3D previews by creating Electron/React Shopify app integrated with Three.js for STL rendering
   }
 }
 
 % Education
 \section{Education}
 
-\cveducation{National University of Asunción}{Software Engineering}{2009--2013}{Completed CS-related curricula, excluding advanced mathematics. Studied software development, algorithms, and database systems for robust backend solutions.}
+\cveducation{National University of Asunción}{Software Engineering}{2009--2013}{Completed CS curricula focusing on software development, algorithms, and database systems. Supported interdisciplinary collaboration with electrical and electronics engineering students to build a line-follower bot backend using computer vision on an Android-mounted system.}
 
-% Core Strengths
-\section{Core Strengths}
-
-\begin{itemize}
-  \item \textbf{Performance Optimization \& Debugging}: Expertise in K6 load testing, bottleneck analysis, and live system debugging
-  \item \textbf{CI/CD Pipeline Design}: Building fast, reliable deployment systems with Docker, GitHub Actions, and automated testing
-  \item \textbf{System Refactoring}: Transforming legacy codebases into composable, maintainable architectures
-  \item \textbf{Rapid Prototyping}: Bias for action approach to problem-solving with iterative improvement cycles
-  \item \textbf{Cross-functional Collaboration}: Working effectively with product owners, PMs, and domain experts to define clear success criteria
-\end{itemize}
-
-% Technical Skills
-\section{Technical Skills}
-
-\textbf{Performance \& Optimization:} K6 Load Testing, System Debugging, Performance Analysis, Bottleneck Identification\\[0.4em]
-\textbf{Backend Development:} TypeScript, Node.js, NestJS, Event-Driven Architecture, Microservices\\[0.4em]
-\textbf{DevOps \& CI/CD:} Docker, GitHub Actions, Terraform, AWS ECS, Pipeline Optimization\\[0.4em]
-\textbf{Databases:} PostgreSQL, ClickHouse, Aurora RDS\\[0.4em]
-\textbf{Frontend:} React, Next.js, Qt/C++\\[0.4em]
-\textbf{Cloud \& Infrastructure:} AWS, SQS/EventBridge, Datadog\\[0.4em]
-\textbf{Integration:} Stripe, Keycloak
 
 \end{document}
