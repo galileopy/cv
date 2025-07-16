@@ -7,6 +7,7 @@
 \usepackage{fontspec}
 \usepackage{tabularx}
 \usepackage{array}
+\usepackage{indentfirst}
 
 % ========== FONT SELECTION ==========
 % Default SERIF FONTS (Classic, traditional look)
@@ -49,7 +50,7 @@
 
 % Reduce spacing
 \titlespacing*{\section}{0pt}{0.5em}{0.2em}
-\titlespacing*{\subsection}{1em}{0.3em}{0.1em}
+\titlespacing*{\subsection}{0em}{0.3em}{0.1em}
 
 % Custom list formatting
 \setlist[itemize]{leftmargin=0.8em, topsep=0pt, itemsep=0pt, parsep=0pt}
@@ -79,9 +80,8 @@
 }
 
 \newcommand{\cvrole}[3]{
-  \subsection{#1 \hfill {\footnotesize\textcolor{mediumgray}{#2}}}
+  \normalsize{\textcolor{darkgray}{#1 \hfill {\bfseries\footnotesize\textcolor{mediumgray}{#2}}}}\\
   {\footnotesize #3}
-  \vspace{0.2em}
 }
 
 \newcommand{\cvsinglecompany}[5]{
@@ -102,23 +102,18 @@
 
 % About/Summary
 \section{About}
-{\footnotesize Lead Backend Engineer with 10+ years of experience building backend systems, CI/CD pipelines, and performance optimization. Reduced invoice processing time from 2 days to 2 hours at Clipboard Health. Built CI/CD pipelines with 10-minute deployments. Converted legacy systems into microservices. Works best with clear goals and fast feedback loops.}
+{\footnotesize I thrive in fast-paced environments and always optimize for speed, spotting and fixing any constant drags on the process. Whether it's speeding up tests that take too long, sorting out root causes for release delays from conflicts,  or setting up ways for everyone to deliver work independently with strong confidence even when the team is blocked on releases. This way keeps products stable, but processes and strategies keep evolving. Let's team up and speed up!}
 
 \section{Core Strengths}
 {\footnotesize
-	\textbf{Performance Optimization}: Delivered sub-500ms report loading times by rewriting struggling ad-impression ETL pipeline handling over 1M requests/day using K6 load testing and ClickHouse event-driven storage $\bullet$ \textbf{CI/CD \& DevOps}: Empowered team of 5 developers to achieve daily releases by building CI/CD pipelines with Docker and GitHub Actions, incorporating Jest automated testing $\bullet$ \textbf{System Refactoring}: Minimized maintenance dependencies by refactoring legacy code into independent subsystems using custom Git filter-branch scripts, leading to seamless onboarding for 100+ engineers $\bullet$ \textbf{Cross-functional Collaboration}: Facilitated product managers and 3-5 developers to minimize design back-and-forth through attentive listening, note-taking, and clarifying questions
-}
-
-% Technical Skills
-\section{Technical Skills}
-{\footnotesize
-	\textbf{Performance \& Testing:} K6 Load Testing, System Debugging, Bottleneck Analysis $\bullet$ \textbf{Backend:} TypeScript, Node.js, NestJS, Event-Driven Architecture, Microservices $\bullet$ \textbf{DevOps:} Docker, GitHub Actions, Terraform, AWS ECS, CI/CD Pipelines $\bullet$ \textbf{Databases:} PostgreSQL, ClickHouse, Aurora RDS $\bullet$ \textbf{Frontend:} React, Next.js, Qt/C++ $\bullet$ \textbf{Cloud:} AWS, SQS/EventBridge, Datadog $\bullet$ \textbf{Integration:} Stripe, Keycloak, Real-time Systems
+	$\bullet$ \textbf{Performance Optimization \& Testing}: Delivered sub-500ms report loading times by rewriting struggling ad-impression ETL pipeline handling over 1M requests/day using K6 load testing and ClickHouse event-driven storage, with expertise in system debugging and bottleneck analysis $\bullet$ \textbf{CI/CD \& DevOps}: Empowered team of 5 developers to achieve daily releases by building CI/CD pipelines with Docker and GitHub Actions, incorporating Jest automated testing, with proficiency in Terraform and AWS ECS $\bullet$ \textbf{Backend System Development}: Minimized maintenance dependencies by refactoring legacy code into independent subsystems using custom Git filter-branch scripts, leading to seamless onboarding for 100+ engineers, leveraging TypeScript, Node.js, NestJS, and event-driven microservices architecture $\bullet$ \textbf{Cross-functional Collaboration}: Facilitated product managers and 3-5 developers to minimize design back-and-forth through attentive listening, note-taking, and clarifying questions. $\bullet$ \textbf{Full-Stack Technical Expertise}: Proficient across databases (PostgreSQL, ClickHouse, Aurora RDS), frontend technologies (React, Next.js, Qt/C++), cloud platforms (AWS, SQS/EventBridge, Datadog), and real-time systems integration.
 }
 
 % Work Experience
 \section{Work Experience}
 
 \cvcompany{Glui}{-- \textit{U.S.-based global startup}}{
+	
   \cvrole{Lead Technologist}{Feb 2025--Present}{
 $\bullet$ \actionverb{Attained} 80M requests/day capacity validation by overseeing event capturing system and load test plan using K6 $\bullet$ \actionverb{Decreased} test case review time from hours to minutes by creating Test helper SDK using TypeScript, Superagent, and Jest
   }
@@ -143,11 +138,11 @@ $\bullet$ \actionverb{Realized} zero-downtime separation of frontend from monoli
 }
 
 \cvsinglecompany{Jijo}{-- \textit{U.S.-based global startup}}{Software Engineer}{2021}{
-$\bullet$ \actionverb{Facilitated} supply-side users to collect reliable payments by building Stripe integration with booking interface and Redux state management $\bullet$ \actionverb{Minimized} video call costs while improving quality by migrating from Chime to Agora SDK using React, custom hooks, and session providers
+$\bullet$ \actionverb{Facilitated} supply-side users to collect reliable payments by building Stripe integration with booking interface and Redux state management $\bullet$ \actionverb{Minimized} video call costs while improving quality by migrating from Chime to Agora SDK using React, hooks, and context providers
 }
 
 \cvsinglecompany{National Computing Center}{-- \textit{On-site, Asunción, Paraguay}}{Full Stack Software Engineer}{2018--2020}{
-$\bullet$ \actionverb{Eliminated} 10K+ printed PTO requests/year for 2000+ employees and HR team by building React platform for clock-in/out and leave requests using Node.js, Express, and PostgreSQL, 
+$\bullet$ \actionverb{Eliminated} 10K+ printed PTO requests/year for 2000+ employees and HR team by building React platform for clock-in/out and leave requests using Node.js, Express, and PostgreSQL.
 }
 
 \cvsinglecompany{Trivellini Tech}{-- \textit{On-site, Asunción, Paraguay}}{Software Engineer}{2017--2018}{

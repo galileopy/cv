@@ -7,6 +7,7 @@
 \usepackage{fontspec}
 \usepackage{tabularx}
 \usepackage{array}
+\usepackage{indentfirst}
 
 % Set main font - Classic serif font for professional appearance
 \usepackage{lmodern}
@@ -39,7 +40,7 @@
   {}[\textcolor{lightgray}{\titlerule[0.8pt]}]
 
 \titleformat{\subsection}
-  {\normalsize\bfseries}
+  {\large\bfseries}
   {}
   {0em}
   {}
@@ -77,8 +78,8 @@
 }
 
 \newcommand{\cvrole}[4]{
-  \textbf{#1} \hfill \textcolor{mediumgray}{\small #2}\\
-  \textit{#3}
+  \large{#1} \hfill \textcolor{mediumgray}{\small #2}\\
+  \normalsize\textit{#3}
   \begin{itemize}
     #4
   \end{itemize}
@@ -100,7 +101,7 @@
 
 % About/Summary
 \section{About}
-Lead Backend Engineer with 10+ years of experience building backend systems, CI/CD pipelines, and performance optimization. Reduced invoice processing time from 2 days to 2 hours at Clipboard Health. Built CI/CD pipelines with 10-minute deployments. Converted legacy systems into microservices. Works best with clear goals and fast feedback loops.
+I thrive in fast-paced environments and always optimize for speed, spotting and fixing any constant drags on the process. Whether it's speeding up tests that take too long, sorting out root causes for release delays from conflicts,  or setting up ways for everyone to deliver work independently with strong confidence even when the team is blocked on releases. This way keeps products stable, but processes and strategies keep evolving. Let's team up and speed up!
 
 % Core Strengths
 \section{Core Strengths}
@@ -109,7 +110,7 @@ Lead Backend Engineer with 10+ years of experience building backend systems, CI/
 \item \textbf{Performance Optimization \& Testing}: Delivered sub-500ms report loading times by rewriting struggling ad-impression ETL pipeline handling over 1M requests/day using K6 load testing and ClickHouse event-driven storage, with expertise in system debugging and bottleneck analysis
 \item \textbf{CI/CD \& DevOps}: Empowered team of 5 developers to achieve daily releases by building CI/CD pipelines with Docker and GitHub Actions, incorporating Jest automated testing, with proficiency in Terraform and AWS ECS
 \item \textbf{Backend System Development}: Minimized maintenance dependencies by refactoring legacy code into independent subsystems using custom Git filter-branch scripts, leading to seamless onboarding for 100+ engineers, leveraging TypeScript, Node.js, NestJS, and event-driven microservices architecture
-\item \textbf{Cross-functional Collaboration}: Facilitated product managers and 3-5 developers to minimize design back-and-forth through attentive listening, note-taking, and clarifying questions, integrating complex systems like Stripe and Keycloak
+\item \textbf{Cross-functional Collaboration}: Facilitated product managers and 3-5 developers to minimize design back-and-forth through attentive listening, note-taking, and clarifying questions.
 \item \textbf{Full-Stack Technical Expertise}: Proficient across databases (PostgreSQL, ClickHouse, Aurora RDS), frontend technologies (React, Next.js, Qt/C++), cloud platforms (AWS, SQS/EventBridge, Datadog), and real-time systems integration
 \end{itemize}
 
@@ -118,6 +119,7 @@ Lead Backend Engineer with 10+ years of experience building backend systems, CI/
 \section{Work Experience}
 
 \cvcompany{Glui}{-- \textit{U.S.-based global startup}}{
+
   \cvrole{Lead Technologist}{Feb 2025--Present}{Remote, from Asunción, Paraguay}{
     \item \actionverb{Attained} 80M requests/day capacity validation by overseeing event capturing system and load test plan using K6
     \item \actionverb{Decreased} test case review time from hours to minutes by creating Test helper SDK using TypeScript, Superagent, and Jest

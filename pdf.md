@@ -11,7 +11,7 @@
 
 ## Summary
 
-Lead Backend Engineer with 10+ years of experience building backend systems, CI/CD pipelines, and performance optimization. Reduced invoice processing time from 2 days to 2 hours at Clipboard Health. Built CI/CD pipelines with 10-minute deployments. Converted legacy systems into microservices. Works best with clear goals and fast feedback loops.
+I thrive in fast-paced environments and always optimize for speed, spotting and fixing any constant drags on the process. Whether it's speeding up tests that take too long, sorting out root causes for release delays from conflicts,  or setting up ways for everyone to deliver work independently with strong confidence even when the team is blocked on releases. This way keeps products stable, but processes and strategies keep evolving. Let's team up and speed up!
 
 ## Core Strengths
 

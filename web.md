@@ -11,8 +11,7 @@
 
 ### Summary
 
-Action-oriented backend engineer with 10+ years of experience building scalable systems and optimizing engineering workflows. I specialize CI/CD automation, event-driven microservices, and developer tooling. My work consistently improves deploy speed, feedback loops, and platform reliability—whether refactoring legacy code into composable services or instrumenting pipelines with clear performance metrics. I thrive in environments with clear goals, collaborative iteration, and freedom to experiment.
-
+I thrive in fast-paced environments and always optimize for speed, spotting and fixing any constant drags on the process. Whether it's speeding up tests that take too long, sorting out root causes for release delays from conflicts,  or setting up ways for everyone to deliver work independently with strong confidence even when the team is blocked on releases. This way keeps products stable, but processes and strategies keep evolving. Let's team up and speed up!
 ---
 
 ### Education
