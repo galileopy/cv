@@ -1,5 +1,5 @@
 \documentclass[11pt,a4paper]{article}
-\usepackage[margin=0.75in]{geometry}
+\usepackage[margin=0.5in]{geometry}
 \usepackage{enumitem}
 \usepackage{titlesec}
 \usepackage{hyperref}
@@ -57,24 +57,23 @@
 % Custom commands
 \newcommand{\cvheader}[5]{
   \begin{center}
-    {\Huge \textbf{#1}}\\[0.4em]
-    {\Large \textcolor{darkgray}{#2}}\\[1em]
+    {\LARGE \textbf{#1}}\\[0.1em]
+    {\large \textcolor{darkgray}{#2}}\\[0.1em]
     
-    \textcolor{mediumgray}{#3}\\[0.6em]
+    \textcolor{mediumgray}{#3}\\[0.1em]
     
     \begin{tabular}{c}
-      \href{mailto:#4}{#4} $\bullet$ \href{https://#5}{#5}\\[0.3em]
+      \href{mailto:#4}{#4} $\bullet$ \href{https://#5}{#5}\\[0.1em]
       \href{https://github.com/galileopy}{github.com/galileopy} $\bullet$ 
       \href{https://www.linkedin.com/in/galileopy}{linkedin.com/in/galileopy}
     \end{tabular}
   \end{center}
-  \vspace{1.2em}
+  %\vspace{0.1em}
 }
 
 \newcommand{\cvcompany}[3]{
   \subsection{#1 \textcolor{mediumgray}{#2}}
   #3
-  \vspace{0.5em}
 }
 
 \newcommand{\cvrole}[4]{
@@ -107,22 +106,12 @@ Lead Backend Engineer with 10+ years of experience building backend systems, CI/
 \section{Core Strengths}
 
 \begin{itemize}
-	\item \textbf{Performance Optimization \& Debugging}: Delivered sub-500ms report loading times by rewriting struggling ad-impression ETL pipeline handling over 1M requests/day using K6 load testing and ClickHouse event-driven storage
-	\item \textbf{CI/CD Pipeline Design}: Empowered team of 5 developers to achieve daily releases by building CI/CD pipelines with Docker and GitHub Actions, incorporating Jest automated testing
-	\item \textbf{System Refactoring}: Minimized maintenance dependencies by refactoring legacy code into independent subsystems using custom Git filter-branch scripts, leading to seamless onboarding for 100+ engineers
-	\item \textbf{Cross-functional Collaboration}: Facilitated product managers and 3-5 developers to minimize design back-and-forth through attentive listening, note-taking, and clarifying questions
+\item \textbf{Performance Optimization \& Testing}: Delivered sub-500ms report loading times by rewriting struggling ad-impression ETL pipeline handling over 1M requests/day using K6 load testing and ClickHouse event-driven storage, with expertise in system debugging and bottleneck analysis
+\item \textbf{CI/CD \& DevOps}: Empowered team of 5 developers to achieve daily releases by building CI/CD pipelines with Docker and GitHub Actions, incorporating Jest automated testing, with proficiency in Terraform and AWS ECS
+\item \textbf{Backend System Development}: Minimized maintenance dependencies by refactoring legacy code into independent subsystems using custom Git filter-branch scripts, leading to seamless onboarding for 100+ engineers, leveraging TypeScript, Node.js, NestJS, and event-driven microservices architecture
+\item \textbf{Cross-functional Collaboration}: Facilitated product managers and 3-5 developers to minimize design back-and-forth through attentive listening, note-taking, and clarifying questions, integrating complex systems like Stripe and Keycloak
+\item \textbf{Full-Stack Technical Expertise}: Proficient across databases (PostgreSQL, ClickHouse, Aurora RDS), frontend technologies (React, Next.js, Qt/C++), cloud platforms (AWS, SQS/EventBridge, Datadog), and real-time systems integration
 \end{itemize}
-
-% Technical Skills
-\section{Technical Skills}
-
-\textbf{Performance \& Testing:} K6 Load Testing, System Debugging, Bottleneck Analysis\\[0.4em]
-\textbf{Backend:} TypeScript, Node.js, NestJS, Event-Driven Architecture, Microservices\\[0.4em]
-\textbf{DevOps:} Docker, GitHub Actions, Terraform, AWS ECS, CI/CD Pipelines\\[0.4em]
-\textbf{Databases:} PostgreSQL, ClickHouse, Aurora RDS\\[0.4em]
-\textbf{Frontend:} React, Next.js, Qt/C++\\[0.4em]
-\textbf{Cloud:} AWS, SQS/EventBridge, Datadog\\[0.4em]
-\textbf{Integration:} Stripe, Keycloak, Real-time Systems
 
 
 % Work Experience
@@ -157,29 +146,23 @@ Lead Backend Engineer with 10+ years of experience building backend systems, CI/
   }
 }
 
-\cvcompany{Jijo}{-- \textit{U.S.-based global startup}}{
-  \cvrole{Software Engineer}{2021}{Remote, from Asunción, Paraguay}{
+\cvcompany{Galileo Sanchez, Freelancer}{-- \textit{2014--2021}}{
+  \cvrole{Jijo}{2021}{Remote, from Asunción, Paraguay}{
     \item \actionverb{Facilitated} supply-side users to collect reliable payments by building Stripe integration with booking interface and Redux state management
     \item \actionverb{Minimized} video call costs while improving quality by migrating from Chime to Agora SDK using React, custom hooks, and session providers
   }
-}
-
-\cvcompany{National Computing Center}{}{
-  \cvrole{Full Stack Software Engineer}{2018--2020}{Remote, from Asunción, Paraguay}{
-    \item \actionverb{Decreased} administrative time by building React platform for clock-in/out and leave requests using Node.js, Express, and PostgreSQL, eliminating 10K+ printed PTO requests/year for 2000+ employees and HR team
+  
+  \cvrole{National Computing Center}{2018--2020}{On-site, Asunción, Paraguay}{
+    \item \actionverb{Eliminated} 10K+ printed PTO requests/year for 2000+ employees and HR team  by building React platform for clock-in/out and leave requests using Node.js, Express, and PostgreSQL
     \item \actionverb{Delivered} on-time completion of full development lifecycle by managing from start to deployment under technical director oversight
   }
-}
-
-\cvcompany{Trivellini Tech}{}{
-  \cvrole{Software Engineer}{2017--2018}{Remote, from Asunción, Paraguay}{
+  
+  \cvrole{Trivellini Tech}{2017--2018}{On-site, Asunción, Paraguay}{
     \item \actionverb{Accomplished} real-time UI responsiveness for surgical device metrics by building C++/Qt frontend with Qt Signals, integrated with Raspbian on Raspberry Pi
     \item \actionverb{Supported} surgeons and team of 3 engineers to optimize device response times by collaborating in results-based flexible environment
   }
-}
-
-\cvcompany{Freelancer}{}{
-  \cvrole{Full Stack Engineer}{2014--2017}{Remote, from Asunción, Paraguay}{
+  
+  \cvrole{Alien Milling Co.}{2014--2017}{Remote, from Asunción, Paraguay}{
     \item \actionverb{Allowed} e-commerce clients to process labels with 3D previews by creating Electron/React Shopify app integrated with Three.js for STL rendering
   }
 }

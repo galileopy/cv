@@ -67,13 +67,13 @@ Completed core CS curriculum (excluding advanced mathematics). Focus on software
 * Fully owned feature delivery and compliance workflows.
 
 **Trivellini Tech**
-**Software Engineer** – 2017–2018
+**Software Engineer** – 2016–2018
 
 * Built real-time Qt/C++ UI for surgical device monitors with responsive protocol layer.
 * Worked closely with hardware teams on cross-functional integration.
 
 **Freelance**
-**Full Stack Developer** – 2014–2017
+**Full Stack Developer** – 2014–2016
 
 * Created Electron/React Shopify label generator.
 * Delivered backend services, UIs, and integrations using Django and AngularJS.

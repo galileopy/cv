@@ -61,13 +61,13 @@ Lead Backend Engineer with 10+ years of experience building backend systems, CI/
 - Delivered on-time completion of full development lifecycle by managing from start to deployment under technical director oversight.
 
 **Trivellini Tech**  
-**Software Engineer** (2017 - 2018) - Remote, from Asunción, Paraguay
+**Software Engineer** (2016 - 2018) - Remote, from Asunción, Paraguay
 
 - Accomplished real-time UI responsiveness for surgical device metrics by building C++/Qt frontend with Qt Signals, integrated with Raspbian on Raspberry Pi.
 - Supported surgeons and a team of 3 engineers to optimize device response times by collaborating in a results-based flexible environment.
 
 **Freelancer**  
-**Full Stack Engineer** (2014 - 2017) - Remote, from Asunción, Paraguay
+**Full Stack Engineer** (2014 - 2016) - Remote, from Asunción, Paraguay
 
 - Allowed e-commerce clients to process labels with 3D previews by creating Electron/React Shopify app integrated with Three.js for STL rendering.
 
