@@ -44,9 +44,9 @@ export const RESUME_DATA: ResumeData = {
   location: "Remote, from Asunción, Paraguay",
   locationLink: "https://www.google.com/maps/place/Asunción",
   about:
-    "Action-oriented backend engineer focused on CI/CD automation and scalable systems.",
+    "Unblocking and speeding up teams through strategic optimization of systems and processes.",
   summary:
-    "Action-oriented backend engineer with 10+ years of experience building scalable systems and optimizing engineering workflows. I specialize CI/CD automation, event-driven microservices, and developer tooling. My work consistently improves deploy speed, feedback loops, and platform reliability—whether refactoring legacy code into composable services or instrumenting pipelines with clear performance metrics. I thrive in environments with clear goals, collaborative iteration, and freedom to experiment.",
+    "Unblocking and speeding up teams through strategic optimization of systems and processes. Whether it's speeding up tests that take too long, sorting out root causes for release delays from conflicts, or setting up ways for everyone to deliver work independently with strong confidence even when the team is blocked on releases. Let's team up and speed up!",
   avatarUrl: "https://avatars.githubusercontent.com/u/7267587?v=4",
   personalWebsiteUrl: "galileopy.com.py",
   resumeUrl: "cv.galileopy.com.py",

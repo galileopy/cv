@@ -11,10 +11,10 @@
 
 ## Summary
 
-I thrive in fast-paced environments and always optimize for speed, spotting and fixing any constant drags on the process. Whether it's speeding up tests that take too long, sorting out root causes for release delays from conflicts,  or setting up ways for everyone to deliver work independently with strong confidence even when the team is blocked on releases. This way keeps products stable, but processes and strategies keep evolving. Let's team up and speed up!
+Unblocking and speeding up teams through strategic optimization of systems and processes. Whether it's speeding up tests that take too long, sorting out root causes for release delays from conflicts, or setting up ways for everyone to deliver work independently with strong confidence even when the team is blocked on releases. Let's team up and speed up!
 
 ## Core Strengths
-
+- Unblocking and speeding up teams through strategic optimization of systems and processes.
 - Delivered sub-500ms report loading times by rewriting a struggling ad-impression ETL pipeline handling over 1M requests/day using K6 load testing and ClickHouse event-driven storage.
 - Empowered a team of 5 developers to achieve daily releases by building CI/CD pipelines with Docker and GitHub Actions, incorporating Jest automated testing.
 - Minimized maintenance dependencies by refactoring legacy code into independent subsystems using custom Git filter-branch scripts, leading to seamless onboarding for 100+ engineers.
