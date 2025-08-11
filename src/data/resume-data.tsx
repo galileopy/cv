@@ -49,7 +49,7 @@ export const RESUME_DATA: ResumeData = {
     "Unblocking and speeding up teams through strategic optimization of systems and processes. Whether it's speeding up tests that take too long, sorting out root causes for release delays from conflicts, or setting up ways for everyone to deliver work independently with strong confidence even when the team is blocked on releases. Let's team up and speed up!",
   avatarUrl: "https://avatars.githubusercontent.com/u/7267587?v=4",
   personalWebsiteUrl: "galileopy.com.py",
-  resumeUrl: "cv.galileopy.com.py",
+  resumeUrl: "https://cv.galileopy.com/resume.pdf",
   contact: {
     email: "galileo@galileopy.com.py",
     social: [
